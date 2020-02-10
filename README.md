@@ -27,6 +27,16 @@ Client: Mid-fi wireframes, component heirarchy, component breakdown, and timefra
 ![map](./map.png)
 ![erd](./erd.png)
 
+components
+-header/nav
+- map - HOURS
+- single-spot
+- single user
+- spots designated by borough
+- all spots
+- log in/register
+- footer
+
 Server: 
 Dependencies: React, Link/router, GoogleMapReact
 Post-MVP: I would like to implement a feature for users to mark themsevles as "skating here" to let their friends know where they are skating that day, also would like to turn it into an actual social network site in this way. Where people can interact with each other. Also would like to implement a feature that has non skate spots to check out nearby. Mainly just like where to get food in the area or a good bar to stop for a drink.# SkateSpots
