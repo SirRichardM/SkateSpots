@@ -40,7 +40,13 @@ end
     params.permit(
         :name,
         :email,
-        :password
+        :password,
+        :description,
+        :favorite_spot,
+        :current_skate,
+        :best_vids,
+        :photo
+
     )
   end
 
