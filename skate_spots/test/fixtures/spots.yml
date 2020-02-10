@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address: MyString
+  trains: MyString
+  obstacles: MyString
+  rating: 1
+  description: MyText
+  directions: MyText
+  bust_factor: MyString
+  noteworthy: MyText
+  photo_main: MyString
+  photo2: MyString
+  photo3: MyString
+  phto4: MyString
+  photo5: MyString
+  user: one
+
+two:
+  name: MyString
+  address: MyString
+  trains: MyString
+  obstacles: MyString
+  rating: 1
+  description: MyText
+  directions: MyText
+  bust_factor: MyString
+  noteworthy: MyText
+  photo_main: MyString
+  photo2: MyString
+  photo3: MyString
+  phto4: MyString
+  photo5: MyString
+  user: two
