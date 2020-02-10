@@ -18,7 +18,13 @@ class UserController < ApplicationController
       response = {message: "Unauthorized!"}
       json_response(response)
     end
-  end   
+  end
+
+
+  def index
+    @users = User.all
+    json_response(@users)
+  end
 
   private
 
@@ -29,4 +35,5 @@ class UserController < ApplicationController
         :password
     )
   end
+
 end
