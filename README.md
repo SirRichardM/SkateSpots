@@ -28,14 +28,16 @@ Client: Mid-fi wireframes, component heirarchy, component breakdown, and timefra
 ![erd](./erd.png)
 
 components
--header/nav
-- map - HOURS
-- single-spot
-- single user
+- header/nav - 30 mins
+- map - i have no idea - SO LONG
+- single-spot - two hours
+- single user - one hour
 - spots designated by borough
-- all spots
-- log in/register
-- footer
+- all spots - three hours for carousel 
+- log in/register - two hours
+- footer - 30 mins
+
+CSS - A TON OF TIME
 
 Server: 
 Dependencies: React, Link/router, GoogleMapReact
