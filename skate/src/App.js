@@ -39,13 +39,22 @@ class App extends Component {
     }
   }
 
+  handleLogout = () => {
+    this.setState({
+      currentUser: null
+    })
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('name');
+    localStorage.removeItem('email');
+  }
+
 
   render() {
     return (
       <div className="App">
 
         <Header />
-        <Login handleLogin={this.handleLogin} />
+        <Login handleLogin={this.handleLogin} handleLogout={this.handleLogout} />
         {this.state.currentUser ?
           <h1> What's really hood {this.state.currentUser.name} ?</h1>
           :

@@ -40,6 +40,7 @@ class Login extends Component {
 
 
         </form>
+        <button onClick={this.props.handleLogout}>Logout!</button>
 
       </div>
     )
