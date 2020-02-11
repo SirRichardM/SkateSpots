@@ -6,16 +6,15 @@ class Login extends Component {
     super(props)
 
     this.state = {
-      email: "", 
+      email: "",
       password: ""
     }
-
   }
 
   handleChange = (e) => {
     const { name, value } = e.target;
-    this.setState({ [name]: value})
- }
+    this.setState({ [name]: value })
+  }
 
 
   render() {
@@ -41,9 +40,9 @@ class Login extends Component {
 
 
         </form>
-        
-    </div>
-  )
+
+      </div>
+    )
   }
 }
 

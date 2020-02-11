@@ -23,10 +23,10 @@ export const registerUser = async (registerData) => {
     localStorage.setItem('name', resp.data.user.name);
     localStorage.setItem('email', resp.data.user.email);
     return resp.data.user;
-  } catch(e) {
+  } catch (e) {
     console.log(e.response);
     if (e.response.status === 422) {
-      return {errorMessage: "Email is already associated with a user, please login to continue"}
+      return { errorMessage: "Email is already associated with a user, please login to continue" }
     }
   }
 }
@@ -34,4 +34,11 @@ export const registerUser = async (registerData) => {
 export const indexSpots = async () => {
   const resp = await api.get('/spot');
   return resp.data
+}
+
+export const verifyUser = () => {
+  const token = localStorage.getItem('authToken');
+  if (token) {
+    api.defaults.headers.common.authorization = `Bearer ${token}`;
+  }
 }

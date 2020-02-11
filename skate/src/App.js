@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import Header from "./components/header"
-import Login from "./components/login"
-import { loginUser } from './services/apiHelper';
+import Login from "./components/Login"
+import { loginUser, verifyUser } from './services/apiHelper';
+import AllSpots  from "./components/allSpots"
 
 
 class App extends Component {
@@ -13,31 +14,44 @@ class App extends Component {
     this.state = {
       name: "",
       email: "",
-      password: "", 
+      password: "",
       currentUser: null,
       errorText: ""
     }
   }
 
   handleLogin = async (e, loginData) => {
-  e.preventDefault();
-  const currentUser = await loginUser(loginData)
-  this.setState({ currentUser });
-  
+    e.preventDefault();
+    const currentUser = await loginUser(loginData)
+    this.setState({ currentUser });
+    
   }
 
+  componentDidMount() {
+    verifyUser();
+    if (localStorage.getItem('authToken')) {
+      const name = localStorage.getItem('name');
+      const email = localStorage.getItem('email');
+      const user = { name, email };
+      user && this.setState({
+        currentUser: user
+      })
+    }
+  }
 
 
   render() {
     return (
       <div className="App">
-      
+
         <Header />
-        <Login handleLogin={this.handleLogin}/>
+        <Login handleLogin={this.handleLogin} />
         {this.state.currentUser ?
           <h1> What's really hood {this.state.currentUser.name} ?</h1>
           :
           <div>fuck you</div>}
+        <AllSpots />
+
       </div>
     );
   }
