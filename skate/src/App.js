@@ -6,6 +6,7 @@ import Login from "./components/Login"
 import { loginUser, verifyUser, registerUser } from './services/apiHelper';
 import AllSpots from "./components/allSpots"
 import Register from "./components/register"
+import MakeSpot from "./components/makeSpot"
 
 
 class App extends Component {
@@ -73,6 +74,7 @@ class App extends Component {
           <div>fuck you</div>}
         <AllSpots />
         <Register handleRegister={this.handleRegister} />
+        <MakeSpot />
 
       </div>
     );

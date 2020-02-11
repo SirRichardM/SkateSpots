@@ -44,3 +44,8 @@ export const verifyUser = () => {
   }
 }
 
+export const postSpot = async (spotInfo) => {
+  const resp = await api.post('/spot', spotInfo)
+  return resp.data
+}
+
