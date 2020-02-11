@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from "./components/header"
 import Login from "./components/Login"
-import { loginUser, verifyUser } from './services/apiHelper';
-import AllSpots  from "./components/allSpots"
+import { loginUser, verifyUser, registerUser } from './services/apiHelper';
+import AllSpots from "./components/allSpots"
+import Register from "./components/register"
 
 
 class App extends Component {
@@ -48,6 +49,17 @@ class App extends Component {
     localStorage.removeItem('email');
   }
 
+  handleRegister = async (e, registerData) => {
+    e.preventDefault();
+    const currentUser = await registerUser(registerData);
+    if (!currentUser.errorMessage) {
+      this.setState({ currentUser });
+      
+    } else {
+      this.setState({ errorText: currentUser.errorMessage })
+    }
+  }
+
 
   render() {
     return (
@@ -60,6 +72,7 @@ class App extends Component {
           :
           <div>fuck you</div>}
         <AllSpots />
+        <Register handleRegister={this.handleRegister} />
 
       </div>
     );

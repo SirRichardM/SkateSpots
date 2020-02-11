@@ -34,7 +34,7 @@ class AllSpots extends Component {
         {this.state.spots.map((spot, index) =>  (
         <div key={index}>
             <h2>{spot.name}</h2>
-            <img src={spot.photo_main} />
+            <img src={spot.photo_main} alt="skate spot" />
             <h4>{spot.address}</h4>
             <h4>{spot.boro}</h4>
         </div>

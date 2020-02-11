@@ -33,6 +33,7 @@ export const registerUser = async (registerData) => {
 
 export const indexSpots = async () => {
   const resp = await api.get('/spot');
+  console.log(resp)
   return resp.data
 }
 
