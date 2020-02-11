@@ -12,7 +12,7 @@ class UserController < ApplicationController
     @user = User.find_by_email(params[:email])
     if @user.authenticate(params[:password])
       token = endcode(id: @user.id, name: @user.name)
-      response = {auth_token: token, user: @user}
+      response = {auth_token: token, message: "fuck ruby", user: @user}
       json_response(response)
     else 
       response = {message: "Unauthorized!"}
