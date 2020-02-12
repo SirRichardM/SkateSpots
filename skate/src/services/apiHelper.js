@@ -63,3 +63,7 @@ export const putSpot = async (id, postData) => {
   console.log(todo)
   // return todo
 }
+
+export const deleteSpot = async (spotToDeleteId) => {
+  await api.delete(`/spot/${spotToDeleteId}`);
+}

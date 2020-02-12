@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link, Route } from "react-router-dom"
 import axios from "axios"
-import { verifyUser, singleSpots, putSpot } from "../services/apiHelper"
+import { verifyUser, singleSpots, putSpot, deleteSpot } from "../services/apiHelper"
 
 class SingleSpot extends Component {
   constructor(props) {
@@ -9,6 +9,7 @@ class SingleSpot extends Component {
 
     this.state = {
       spotIdt: null,
+      userId: null,
       currentUser: null,
       spot: null,
       spotUp: {
@@ -34,7 +35,8 @@ class SingleSpot extends Component {
     const spot = await singleSpots(this.props.spotId);
     console.log(spot)
     this.setState({ spot })
-    this.setState({ spotIdt: spot.id})
+    this.setState({ spotIdt: spot.id })
+    this.setState({ userId: spot.user_id})
   }
 
   componentDidMount = async () => {
@@ -70,9 +72,14 @@ class SingleSpot extends Component {
     putSpot(this.props.spotId, event)
   }
 
+  handleDelete = async (e) => {
+    e.preventDefault();
+    deleteSpot(this.state.spotIdt)
+  }
+
 
   render() {
-    console.log(this.state.spotIdt)
+    console.log(this.state.userId)
     console.log(this.state.spotUp)
     console.log(this.props.user.id)
     return (
@@ -96,8 +103,8 @@ class SingleSpot extends Component {
           </div>
         }
 
-
-        { this.props.user.id == this.state.spotIdt &&
+          
+        { this.props.user.id == this.state.userId &&
           <form onSubmit={(e) => this.handleUpdate(e, this.state.spotUp)}>
             <div className="submitForm">
 
@@ -161,12 +168,17 @@ class SingleSpot extends Component {
               />
 
 
-              <input type="submit" />
+            <input type="submit" />
+            
 
+            
             </div>
-
-          </form>
+            <button onClick={this.handleDelete}>DELETE</button>
+        </form>
+          
+         
         }
+          
 
       </div>
 
