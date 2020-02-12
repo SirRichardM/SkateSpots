@@ -2,7 +2,8 @@ class SpotController < ApplicationController
   before_action :set_spot, only: [:show, :update, :destroy]
 
   def index 
-    @spots = current_user.spots
+    #@spots = current_user.spots
+    @spots = Spot.all
     json_response(@spots)
   end
   

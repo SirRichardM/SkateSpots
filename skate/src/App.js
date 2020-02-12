@@ -36,7 +36,8 @@ class App extends Component {
     if (localStorage.getItem('authToken')) {
       const name = localStorage.getItem('name');
       const email = localStorage.getItem('email');
-      const user = { name, email };
+      const id = localStorage.getItem('id')
+      const user = { name, email, id };
       user && this.setState({
         currentUser: user
       })
@@ -66,6 +67,7 @@ class App extends Component {
 
 
   render() {
+    console.log(this.state.currentUser)
     return (
       <div className="App">
 
@@ -82,7 +84,7 @@ class App extends Component {
         <Route exact path="/spot" render={() => <SpotsContainer />} />
         <Route path="/signup" render={() => <Register handleRegister={this.handleRegister} />} />
         <Route path="/spot/:id" render={(props) => (
-          <SingleSpot  spotId={props.match.params.id} />
+          <SingleSpot  spotId={props.match.params.id} user={this.state.currentUser} />
         )} />
         
       </div>

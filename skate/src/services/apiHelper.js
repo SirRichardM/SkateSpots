@@ -6,11 +6,12 @@ const api = axios.create({
 
 export const loginUser = async (loginData) => {
   const resp = await api.post('/auth/login', loginData);
-  console.log(resp);
+  console.log(resp.data.user.id);
   api.defaults.headers.common.authorization = `Bearer ${resp.data.auth_token}`;
   localStorage.setItem('authToken', resp.data.auth_token);
   localStorage.setItem('name', resp.data.user.name);
   localStorage.setItem('email', resp.data.user.email);
+  localStorage.setItem('id', resp.data.user.id)
   return resp.data.user;
 }
 
@@ -55,3 +56,10 @@ export const postSpot = async (spotInfo) => {
   return resp.data
 }
 
+export const putSpot = async (id, postData) => {
+  const resp = await api.put(`/spot/${id}`, postData);
+  console.log(resp.data)
+  const todo = { id: id, name: resp.data.data }
+  console.log(todo)
+  // return todo
+}
