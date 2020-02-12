@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-
+import { Link, Route } from "react-router-dom"
 import './App.css';
 import Header from "./components/header"
 import Login from "./components/Login"
 import { loginUser, verifyUser, registerUser } from './services/apiHelper';
-import AllSpots from "./components/allSpots"
+import AllSpots from "./components/spotsContainer"
 import Register from "./components/register"
 import MakeSpot from "./components/makeSpot"
+import SingleSpot from "./components/singleSpot"
+import SpotsContainer from "./components/spotsContainer";
 
 
 class App extends Component {
@@ -26,7 +28,7 @@ class App extends Component {
     e.preventDefault();
     const currentUser = await loginUser(loginData)
     this.setState({ currentUser });
-    
+
   }
 
   componentDidMount() {
@@ -39,6 +41,7 @@ class App extends Component {
         currentUser: user
       })
     }
+
   }
 
   handleLogout = () => {
@@ -55,7 +58,7 @@ class App extends Component {
     const currentUser = await registerUser(registerData);
     if (!currentUser.errorMessage) {
       this.setState({ currentUser });
-      
+
     } else {
       this.setState({ errorText: currentUser.errorMessage })
     }
@@ -72,10 +75,16 @@ class App extends Component {
           <h1> What's really hood {this.state.currentUser.name} ?</h1>
           :
           <div>fuck you</div>}
-        <AllSpots />
-        <Register handleRegister={this.handleRegister} />
-        <MakeSpot />
-
+        <div className="pic"></div>
+        <Link to="/spot">See All Spots</Link>
+        <Link to="/signup">Register</Link>
+        
+        <Route exact path="/spot" render={() => <SpotsContainer />} />
+        <Route path="/signup" render={() => <Register handleRegister={this.handleRegister} />} />
+        <Route path="/spot/:id" render={(props) => (
+          <SingleSpot  spotId={props.match.params.id} />
+        )} />
+        
       </div>
     );
   }

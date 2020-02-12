@@ -37,7 +37,7 @@ class MakeSpot extends Component {
 
 
   render() {
-    console.log(this.state)
+   
     return(
       <div>
         <form onSubmit={(e) => this.createSpot(e, this.state)}>

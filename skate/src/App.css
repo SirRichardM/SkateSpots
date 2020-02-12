@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.head {
+  background-color: black;
+  color: goldenrod;
+  padding: 2vh;
+  font-family: 'Shrikhand', cursive;
+  text-align: left;
+  margin-top: 0;
+  font-size: 3vw;
+  margin-bottom: 0;
+}
+
+img {
+  height: 40vh;
+}
+
+.pic {
+  height: 75vh;
+  background-image: url(https://a.espncdn.com/photo/2015/0909/as_nycskate01_2048.jpg);
+  background-size: cover;
+  margin-top: 0;
+}

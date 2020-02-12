@@ -5,7 +5,7 @@ function Header() {
 
   return (
     <div>
-      <h1>spots.</h1>
+      <h1 className="head">spotted.</h1>
     </div>
   )
 }

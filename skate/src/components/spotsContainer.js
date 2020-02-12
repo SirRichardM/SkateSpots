@@ -1,26 +1,29 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
 // import { AllSpots } from "./services/apiHelper"
 import { indexSpots, verifyUser } from "../services/apiHelper"
+import { Link, Route } from "react-router-dom"
+import SingleSpot from "./singleSpot"
+import AllSpots from "./alllSpots"
 
 
-class AllSpots extends Component {
+class SpotsContainer extends Component {
   constructor(props) {
     super(props)
-
     this.state = {
-      spots: []
+      spots: null
     }
   }
 
-  
+
 
   readAllSpots = async () => {
+    
     const spots = await indexSpots();
     console.log(spots)
     this.setState({ spots })
-  }  
-  
-  componentDidMount() {
+  }
+
+  componentDidMount = async () => {
     verifyUser();
     this.readAllSpots();
   }
@@ -30,15 +33,9 @@ class AllSpots extends Component {
     console.log(this.state.spots)
     return (
       <div>
+        {this.state.spots && <AllSpots spots={this.state.spots} />}
+        
 
-        {this.state.spots.map((spot, index) =>  (
-        <div key={index}>
-            <h2>{spot.name}</h2>
-            <img src={spot.photo_main} alt="skate spot" />
-            <h4>{spot.address}</h4>
-            <h4>{spot.boro}</h4>
-        </div>
-         ) )}
 
       </div>
 
@@ -46,4 +43,4 @@ class AllSpots extends Component {
   }
 }
 
-export default AllSpots;
+export default SpotsContainer;

@@ -37,6 +37,12 @@ export const indexSpots = async () => {
   return resp.data
 }
 
+export const singleSpots = async (id) => {
+  const resp = await api.get(`/spot/${id}`);
+  console.log(resp)
+  return resp.data
+}
+
 export const verifyUser = () => {
   const token = localStorage.getItem('authToken');
   if (token) {
