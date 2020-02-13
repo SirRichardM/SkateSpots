@@ -1,12 +1,16 @@
 import React from "react"
-import Login from "./Login"
+import  Login  from "./Login"
+import { checkPropTypes } from "prop-types"
 
-function Header() {
 
+function Header(props) {
+
+  console.log(props)
 
   return (
-    <div >
+    <div className="header" >
       <h1 className="head">spotted.</h1>
+      <Login handleLogin={props.handleLogin} handleLogout={props.handleLogout}  />
       
     </div>
   )

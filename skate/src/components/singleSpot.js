@@ -113,19 +113,24 @@ class SingleSpot extends Component {
 
 
   render() {
-    console.log("PROPS");
-    console.log(this.props);
-    console.log(this.state.spotUp)
-    console.log(this.state.comments)
+    
+    console.log(this.props.user)
+    
+      console.log(this.state.userId);
+    // console.log(this.state.spotUp)
+    // console.log(this.state.comments)
     return (
       <div>
         {this.state.spot &&
-          <div>
-            <img src={this.state.spot.photo_main} />
+          <div className="single">
+          <img src={this.state.spot.photo_main} />
+          <div className="locinfo">
             <h2>{this.state.spot.name}</h2>
             <h3>{this.state.spot.boro}</h3>
             <h3>{this.state.spot.address}</h3>
             <h4>{this.state.spot.trains}</h4>
+          </div>
+          <br/>
             <h4>{this.state.spot.obstacles}</h4>
             <p>{this.state.spot.description}</p>
             <p>{this.state.spot.noteworthy}</p>
@@ -201,7 +206,40 @@ class SingleSpot extends Component {
                 value={this.state.spotUp.photo_main}
                 placeholder="Noteworthy"
                 onChange={e => this.handleChange(e)}
-              />
+            />
+
+<input
+                type="text"
+                name="photo2"
+                value={this.state.spotUp.photo2}
+                placeholder="Photo 2"
+                onChange={e => this.handleChange(e)}
+            />
+
+<input
+                type="text"
+                name="photo3"
+                value={this.state.spotUp.photo3}
+                placeholder="Photo 3"
+                onChange={e => this.handleChange(e)}
+            />
+
+<input
+                type="text"
+                name="phto4"
+                value={this.state.spotUp.phto4}
+                placeholder="Photo 4"
+                onChange={e => this.handleChange(e)}
+            />
+
+<input
+                type="text"
+                name="photo5"
+                value={this.state.spotUp.photo5}
+                placeholder="Photo 5"
+                onChange={e => this.handleChange(e)}
+            />
+            
 
 
               <input type="submit" />

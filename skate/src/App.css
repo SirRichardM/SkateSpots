@@ -44,12 +44,13 @@
   font-family: 'Shrikhand', cursive;
   text-align: left;
   margin-top: 0;
-  font-size: 3vw;
+  font-size: 4vw;
   margin-bottom: 0;
 }
 
 img {
   height: 40vh;
+  border: 2vw solid white;
 }
 
 .pic {
@@ -57,4 +58,38 @@ img {
   background-image: url(https://a.espncdn.com/photo/2015/0909/as_nycskate01_2048.jpg);
   background-size: cover;
   margin-top: 0;
+}
+
+.header {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+
+
+}
+
+.single {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3vh;
+}
+
+.showcase {
+  margin: 2vh 10vw;
+  text-decoration: none;
+  border-bottom: 1vh solid black;
+  padding: 2vh;
+  color: white;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3vw;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.showcase > Link {
+  text-decoration: none;
+  background-color: black;
 }

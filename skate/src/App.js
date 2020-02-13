@@ -37,6 +37,7 @@ class App extends Component {
       const name = localStorage.getItem('name');
       const email = localStorage.getItem('email');
       const id = localStorage.getItem('id')
+      console.log(id)
       const user = { name, email, id };
       user && this.setState({
         currentUser: user
@@ -51,7 +52,8 @@ class App extends Component {
     })
     localStorage.removeItem('authToken');
     localStorage.removeItem('name');
-    localStorage.removeItem('email');
+    localStorage.removeItem('email')
+    localStorage.removeItem('id');
   }
 
   handleRegister = async (e, registerData) => {
@@ -71,20 +73,22 @@ class App extends Component {
     return (
       <div className="App">
 
-        <Header />
-        <Login handleLogin={this.handleLogin} handleLogout={this.handleLogout} />
+        <Header  handleLogin={this.handleLogin} handleLogout={this.handleLogout} />
+        {/* <Login handleLogin={this.handleLogin} handleLogout={this.handleLogout} /> */}
+        
+        <div className="pic"></div>
         {this.state.currentUser ?
           <h1> What's really hood {this.state.currentUser.name} ?</h1>
           :
           <div>fuck you</div>}
-        <div className="pic"></div>
         <Link to="/spot">See All Spots</Link>
         <Link to="/signup">Register</Link>
-        
+        <Link to="/spot">Make a Spot</Link>
+        <Route path="/spot" render={() => <MakeSpot />} />
         <Route exact path="/spot" render={() => <SpotsContainer />} />
         <Route path="/signup" render={() => <Register handleRegister={this.handleRegister} />} />
         <Route path="/spot/:id" render={(props) => (
-          <SingleSpot  spotId={props.match.params.id} />
+          <SingleSpot  spotId={props.match.params.id} user={this.state.currentUser} />
         )} />
         
       </div>

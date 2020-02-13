@@ -12,6 +12,7 @@ export const loginUser = async (loginData) => {
   localStorage.setItem('name', resp.data.user.name);
   localStorage.setItem('email', resp.data.user.email);
   localStorage.setItem('id', resp.data.user.id)
+  console.log(resp.data.user.id)
   return resp.data.user;
 }
 

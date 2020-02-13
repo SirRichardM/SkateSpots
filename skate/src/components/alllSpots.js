@@ -16,7 +16,7 @@ class AllSpots extends Component {
     return (
     <div>
       {this.props.spots.map((spot, index) => (
-        <div key={index}>
+        <div key={index} className="showcase">
           <Link to={`/spot/${spot.id}`}>
             <h2>{spot.name}</h2>
             <img src={spot.photo_main} alt="skate spot" />

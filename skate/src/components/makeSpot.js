@@ -72,6 +72,47 @@ class MakeSpot extends Component {
             value={this.state.trains}
             onChange={this.handleChange}
           />
+
+         <label htmlFor="obstacles">What's there to skate?</label>
+
+          <input
+                type="text"
+                name="obstacles"
+                value={this.state.obstacles}
+                placeholder="Stuffs to skate..."
+                onChange={e => this.handleChange(e)}
+          />
+          
+          <label htmlFor="description">Spot Inforomation/Description</label>
+
+              <input
+                type="text"
+                name="description"
+                value={this.state.description}
+                placeholder="Spot description"
+                onChange={e => this.handleChange(e)}
+          />
+          
+          <label htmlFor="noteworthy">Noteworthy tricks that have been done there?</label>
+
+              <input
+                type="text"
+                name="noteworthy"
+                value={this.state.noteworthy}
+                placeholder="Noteworthy"
+                onChange={e => this.handleChange(e)}
+          />
+          
+          <label htmlFor="photo_main">Upload main photo here</label>
+
+              <input
+                type="text"
+                name="photo_main"
+                value={this.state.photo_main}
+                placeholder="Main Photo"
+                onChange={e => this.handleChange(e)}
+              />
+
           
           <button>Share thine knowledge with the world</button>
 
