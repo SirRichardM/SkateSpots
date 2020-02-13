@@ -12,7 +12,7 @@ class CommentController < ApplicationController
     json_response(@comment)
   end
 
-  # POST /todos/:todo_id/items
+  # POST /spot/:spot_id/comment
   def create
     puts comment_params
     @spot = current_user.comments.create!(comment_params)
@@ -34,7 +34,7 @@ class CommentController < ApplicationController
   private
 
   def comment_params
-    params.permit(:text, :spot_id)
+    params.permit(:text, :spot_id, :name)
   end
 
   def set_spot
