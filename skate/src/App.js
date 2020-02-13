@@ -84,7 +84,7 @@ class App extends Component {
         <Route exact path="/spot" render={() => <SpotsContainer />} />
         <Route path="/signup" render={() => <Register handleRegister={this.handleRegister} />} />
         <Route path="/spot/:id" render={(props) => (
-          <SingleSpot  spotId={props.match.params.id} user={this.state.currentUser} />
+          <SingleSpot  spotId={props.match.params.id} />
         )} />
         
       </div>

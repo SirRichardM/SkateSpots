@@ -69,6 +69,7 @@ export const deleteSpot = async (spotToDeleteId) => {
 }
 
 export const commentDaSpot = async (id, comment) => {
+  console.log(comment)
   const resp = await api.post(`/spot/${id}/comment`, comment)
   console.log(resp)
   return resp.data

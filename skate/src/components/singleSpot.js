@@ -10,7 +10,8 @@ class SingleSpot extends Component {
     this.state = {
       comments: [],
       commentData: {
-        text: ''
+        text: '',
+        name: localStorage.getItem('name')
       },
       spot_Id: null,
       userId: null,
@@ -36,8 +37,9 @@ class SingleSpot extends Component {
 
   showComments = async () => {
     const comments = await getComments(this.props.spotId);
-    console.log(comments)
-    this.setState({  comments })
+    this.setState({
+      comments: [...this.state.comments, ...comments]
+    })
   }
 
   oneSpot = async () => {
@@ -87,7 +89,7 @@ class SingleSpot extends Component {
     this.setState({
       spotUp
     })
-    this.setState({ commentData: { text: value } })
+    this.setState({ commentData: { text: value, name: localStorage.getItem('name') } })
   }
 
   handleUpdate = async (e, event) => {
@@ -106,12 +108,13 @@ class SingleSpot extends Component {
     e.preventDefault();
     verifyUser();
     commentDaSpot(this.props.spotId, comment);
-    
+
   }
 
 
   render() {
-    console.log(this.state.userId)
+    console.log("PROPS");
+    console.log(this.props);
     console.log(this.state.spotUp)
     console.log(this.state.comments)
     return (
@@ -137,7 +140,7 @@ class SingleSpot extends Component {
 
 
 
-        {this.props.user.id == this.state.userId &&
+        {localStorage.getItem('id') == this.state.userId &&
           <form onSubmit={(e) => this.handleUpdate(e, this.state.spotUp)}>
             <div className="submitForm">
 
@@ -214,10 +217,10 @@ class SingleSpot extends Component {
 
         {this.state.comments && this.state.comments.map((comment, index) =>
           <div key={index}>
-            <h5>{this.props.user.name} says...</h5>  <p>{comment.text}</p>
+            <h5>{comment.name} says...</h5>  <p>{comment.text}</p>
           </div>
         )}
-        
+
 
         <form onSubmit={(e) => this.postComment(e, this.state.commentData)}>
           <input
