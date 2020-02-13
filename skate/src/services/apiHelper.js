@@ -73,3 +73,9 @@ export const commentDaSpot = async (id, comment) => {
   console.log(resp)
   return resp.data
 }
+
+export const getComments = async (id) => {
+  const resp = await api.get(`/spot/${id}/comment`)
+  console.log(resp)
+  return resp.data
+}

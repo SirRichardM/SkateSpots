@@ -1,13 +1,14 @@
 import React, { Component } from "react"
 import { Link, Route } from "react-router-dom"
 import axios from "axios"
-import { verifyUser, singleSpots, putSpot, deleteSpot, commentDaSpot } from "../services/apiHelper"
+import { verifyUser, singleSpots, putSpot, deleteSpot, commentDaSpot, getComments } from "../services/apiHelper"
 
 class SingleSpot extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
+      comments: [],
       commentData: {
         text: ''
       },
@@ -33,6 +34,11 @@ class SingleSpot extends Component {
     }
   }
 
+  showComments = async () => {
+    const comments = await getComments(this.props.spotId);
+    console.log(comments)
+    this.setState({  comments })
+  }
 
   oneSpot = async () => {
     const spot = await singleSpots(this.props.spotId);
@@ -62,7 +68,7 @@ class SingleSpot extends Component {
 
     verifyUser();
     this.oneSpot();
-
+    this.showComments();
   }
 
   //   componentDidMount = async () => {
@@ -100,16 +106,14 @@ class SingleSpot extends Component {
     e.preventDefault();
     verifyUser();
     commentDaSpot(this.props.spotId, comment);
-    console.log(commentDaSpot(this.props.spotId, comment))
-    console.log(comment)
-
+    
   }
 
 
   render() {
     console.log(this.state.userId)
     console.log(this.state.spotUp)
-    console.log(this.props.user.id)
+    console.log(this.state.comments)
     return (
       <div>
         {this.state.spot &&
@@ -207,6 +211,13 @@ class SingleSpot extends Component {
 
 
         }
+
+        {this.state.comments && this.state.comments.map((comment, index) =>
+          <div key={index}>
+            <h5>{this.props.user.name} says...</h5>  <p>{comment.text}</p>
+          </div>
+        )}
+        
 
         <form onSubmit={(e) => this.postComment(e, this.state.commentData)}>
           <input
