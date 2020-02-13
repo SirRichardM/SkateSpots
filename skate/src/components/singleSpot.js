@@ -1,14 +1,17 @@
 import React, { Component } from "react"
 import { Link, Route } from "react-router-dom"
 import axios from "axios"
-import { verifyUser, singleSpots, putSpot, deleteSpot } from "../services/apiHelper"
+import { verifyUser, singleSpots, putSpot, deleteSpot, commentDaSpot } from "../services/apiHelper"
 
 class SingleSpot extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      spotIdt: null,
+      commentData: {
+        text: ''
+      },
+      spot_Id: null,
       userId: null,
       currentUser: null,
       spot: null,
@@ -26,7 +29,7 @@ class SingleSpot extends Component {
         phto4: null,
         photo5: null
       }
-      
+
     }
   }
 
@@ -35,7 +38,7 @@ class SingleSpot extends Component {
     const spot = await singleSpots(this.props.spotId);
     console.log(spot)
     this.setState({ spot })
-    this.setState({ spotIdt: spot.id })
+    this.setState({ spot_Id: spot.id })
     this.setState({ userId: spot.user_id })
     this.setState({
       spotUp: {
@@ -51,14 +54,15 @@ class SingleSpot extends Component {
         photo3: spot.photo3,
         phto4: spot.photo4,
         photo5: spot.photo5
-    }})
+      }
+    })
   }
 
   componentDidMount = async () => {
-    
+
     verifyUser();
     this.oneSpot();
-    
+
   }
 
   //   componentDidMount = async () => {
@@ -72,24 +76,33 @@ class SingleSpot extends Component {
 
   handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(name);
-    console.log(value);
     let spotUp = { ...this.state.spotUp };
     spotUp[name] = value;
     this.setState({
       spotUp
     })
+    this.setState({ commentData: { text: value } })
   }
 
   handleUpdate = async (e, event) => {
     e.preventDefault()
     verifyUser();
     putSpot(this.props.spotId, event)
+    console.log(putSpot(this.props.spotId, event))
   }
 
   handleDelete = async (e) => {
     e.preventDefault();
-    deleteSpot(this.state.spotIdt)
+    deleteSpot(this.state.spot_Id)
+  }
+
+  postComment = async (e, comment) => {
+    e.preventDefault();
+    verifyUser();
+    commentDaSpot(this.props.spotId, comment);
+    console.log(commentDaSpot(this.props.spotId, comment))
+    console.log(comment)
+
   }
 
 
@@ -112,14 +125,15 @@ class SingleSpot extends Component {
             <img src={this.state.spot.photo2} />
             <img src={this.state.spot.photo3} />
             <img src={this.state.spot.phto4} />
-            <img src={this.state.spot.photo5} /> 
+            <img src={this.state.spot.photo5} />
 
 
           </div>
         }
 
-          
-        { this.props.user.id == this.state.userId &&
+
+
+        {this.props.user.id == this.state.userId &&
           <form onSubmit={(e) => this.handleUpdate(e, this.state.spotUp)}>
             <div className="submitForm">
 
@@ -183,17 +197,27 @@ class SingleSpot extends Component {
               />
 
 
-            <input type="submit" />
-            
+              <input type="submit" />
 
-            
+
+
             </div>
             <button onClick={this.handleDelete}>DELETE</button>
-        </form>
-          
-         
+          </form>
+
+
         }
-          
+
+        <form onSubmit={(e) => this.postComment(e, this.state.commentData)}>
+          <input
+            type="text"
+            name="text"
+            value={this.state.commentData.text}
+            onChange={e => this.handleChange(e)}
+          />
+          <button>Tell us your thoughts..</button>
+        </form>
+
 
       </div>
 
