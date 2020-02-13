@@ -1,11 +1,13 @@
 import React from "react"
+import Login from "./Login"
 
 function Header() {
 
 
   return (
-    <div>
+    <div >
       <h1 className="head">spotted.</h1>
+      
     </div>
   )
 }

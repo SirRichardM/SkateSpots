@@ -36,7 +36,22 @@ class SingleSpot extends Component {
     console.log(spot)
     this.setState({ spot })
     this.setState({ spotIdt: spot.id })
-    this.setState({ userId: spot.user_id})
+    this.setState({ userId: spot.user_id })
+    this.setState({
+      spotUp: {
+        name: spot.name,
+        boro: spot.boro,
+        address: spot.address,
+        trains: spot.trains,
+        obstacles: spot.obstacles,
+        description: spot.description,
+        noteworthy: spot.notworthy,
+        photo_main: spot.photo_main,
+        photo2: spot.photo2,
+        photo3: spot.photo3,
+        phto4: spot.photo4,
+        photo5: spot.photo5
+    }})
   }
 
   componentDidMount = async () => {
@@ -97,7 +112,7 @@ class SingleSpot extends Component {
             <img src={this.state.spot.photo2} />
             <img src={this.state.spot.photo3} />
             <img src={this.state.spot.phto4} />
-            <img src={this.state.spot.photo5} />
+            <img src={this.state.spot.photo5} /> 
 
 
           </div>
