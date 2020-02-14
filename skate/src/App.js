@@ -77,11 +77,12 @@ class App extends Component {
         <Header handleLogin={this.handleLogin} handleLogout={this.handleLogout} />
         {/* <Login handleLogin={this.handleLogin} handleLogout={this.handleLogout} /> */}
 
-        <div className="pic"></div>
-        {this.state.currentUser ?
-          <h1> What's really hood {this.state.currentUser.name} ?</h1>
-          :
-          <div></div>}
+        <div className="pic">
+          <br />
+          {this.state.currentUser &&
+            <h1 className="intro">Sup {this.state.currentUser.name} ?</h1>}
+        </div>
+        
         <nav className="navbar">
           <Link className="golden" to="/spot">See All Spots</Link>
           <Link className="golden" to="/signup">Register</Link>

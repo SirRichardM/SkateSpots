@@ -40,7 +40,7 @@ class Login extends Component {
               onChange={this.handleChange}
             />
          
-            <button>Log the fuck in b</button>
+            <button className="login">Log the fuck in b</button>
 
 
           </form>}

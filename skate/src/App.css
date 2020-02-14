@@ -44,7 +44,7 @@
   font-family: 'Shrikhand', cursive;
   text-align: left;
   margin-top: 0;
-  font-size: 4vw;
+  font-size: 5vw;
   margin-bottom: 0;
   
 }
@@ -82,6 +82,12 @@
 .logbutt{
   margin-right:5vw;
   color: goldenrod;
+  
+  font-size: 2.5vh;
+}
+
+.login {
+  margin-right: 3vw;
 }
 
 .single {
@@ -104,6 +110,7 @@
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-column-gap: 4vw;
+  grid-row-gap: 4vh;
  
 }
 
@@ -121,7 +128,8 @@ button {
 }
 img {
   width: 25vw;
-  background-image: url("https://i.pinimg.com/originals/ce/20/0f/ce200f37419935a750ee859206d98294.jpg");
+  background-image: url("https://4.bp.blogspot.com/-FLUMgLDPjSE/T1OLAP5Vf4I/AAAAAAAAAHo/nrhOS84KZjk/s1600/NYC-Skateboard.jpg");
+  background-size: cover;
 }
 
 .goaway {
@@ -175,6 +183,34 @@ input {
   
 }
 
-.indyshowcase: {
+.indyshowcase {
   border-radius: 5px;
+}
+
+.intro {
+  float: left;
+  margin-left: 10vw;
+  font-family: 'Luckiest Guy', cursive;
+  color: white;;
+  text-shadow: .5vw .5vw black, 1vw 1vw #670303;;
+  font-size: 5vw;
+
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  margin: 2vh 15vw;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2vw;
+}
+
+.register input {
+  height: 4vh;
+}
+
+.register button {
+  margin: 2vh 25vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
