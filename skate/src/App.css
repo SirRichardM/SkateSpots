@@ -40,24 +40,26 @@
 .head {
   background-color: black;
   color: goldenrod;
-  padding: 2vh;
+  padding: 2vh 5vw;
   font-family: 'Shrikhand', cursive;
   text-align: left;
   margin-top: 0;
   font-size: 4vw;
   margin-bottom: 0;
+  
 }
 
-img {
+/* img {
   height: 40vh;
   border: 2vw solid white;
-}
+} */
 
 .pic {
   height: 75vh;
   background-image: url(https://a.espncdn.com/photo/2015/0909/as_nycskate01_2048.jpg);
   background-size: cover;
   margin-top: 0;
+  background-attachment: fixed;
 }
 
 .header {
@@ -66,8 +68,20 @@ img {
   justify-content: space-between;
   font-family: 'Permanent Marker', cursive;
   color: white;
+  
 
 
+}
+
+.headbutt {
+  margin-right: 5vw;
+  margin-top: 5vh;
+
+}
+
+.logbutt{
+  margin-right:5vw;
+  color: goldenrod;
 }
 
 .single {
@@ -78,18 +92,89 @@ img {
 
 .showcase {
   margin: 2vh 10vw;
-  text-decoration: none;
+  
   border-bottom: 1vh solid black;
   padding: 2vh;
   color: white;
   font-family: 'Permanent Marker', cursive;
-  font-size: 3vw;
-  display: flex;
+  font-size: 1vw;
+  display: grid;
   justify-content: space-around;
-  flex-direction: column;
+  flex-direction: row;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-column-gap: 4vw;
+ 
 }
 
-.showcase > Link {
+.showcase > img{
+  border-top-right-radius: 5px;
+  
+}
+
+button {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5vw;
+  box-shadow: .5vw .5vw  #670303;
+  border-radius: 5px;
+  
+}
+img {
+  width: 25vw;
+  background-image: url("https://i.pinimg.com/originals/ce/20/0f/ce200f37419935a750ee859206d98294.jpg");
+}
+
+.goaway {
   text-decoration: none;
+  color: black;
+  text-shadow: .5vw .5vw goldenrod;
+}
+
+a {
+  text-decoration: none;
+}
+
+button :hover {
+ transform: scale(1.5)
+}
+
+.foot {
   background-color: black;
+  margin: 0;
+  padding: 1vh 2vw;
+  color:white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3vh;
+}
+
+input {
+  margin-left: 2vw;
+  margin-right: 1vw;
+  height: 2.5vh;
+  border-radius: 5px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Luckiest Guy', cursive;
+  background-color: black;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  font-size: 2.5vh;
+  color: goldenrod;
+  text-decoration: none;
+}
+
+.golden {
+  color: goldenrod;
+}
+
+.altpic {
+  
+}
+
+.indyshowcase: {
+  border-radius: 5px;
 }

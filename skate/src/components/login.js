@@ -22,7 +22,7 @@ class Login extends Component {
       <div>
         {!localStorage.getItem('name') &&
           <form onSubmit={(e) => this.props.handleLogin(e, this.state)}>
-            <h2>Login!</h2>
+            <h2 className="logbutt">Login!</h2>
             <label htmlFor="email">Email</label>
           
             <input
@@ -44,9 +44,10 @@ class Login extends Component {
 
 
           </form>}
+        <div> 
         {localStorage.getItem('name') &&
-          <button onClick={this.props.handleLogout}>Logout!</button>}
-
+          <button className="headbutt" onClick={this.props.handleLogout}>Logout!</button>}
+          </div>
       </div>
     )
   }

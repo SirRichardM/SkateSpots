@@ -9,6 +9,7 @@ import Register from "./components/register"
 import MakeSpot from "./components/makeSpot"
 import SingleSpot from "./components/singleSpot"
 import SpotsContainer from "./components/spotsContainer";
+import Footer from "./components/footer"
 
 
 class App extends Component {
@@ -73,24 +74,28 @@ class App extends Component {
     return (
       <div className="App">
 
-        <Header  handleLogin={this.handleLogin} handleLogout={this.handleLogout} />
+        <Header handleLogin={this.handleLogin} handleLogout={this.handleLogout} />
         {/* <Login handleLogin={this.handleLogin} handleLogout={this.handleLogout} /> */}
-        
+
         <div className="pic"></div>
         {this.state.currentUser ?
           <h1> What's really hood {this.state.currentUser.name} ?</h1>
           :
-          <div>fuck you</div>}
-        <Link to="/spot">See All Spots</Link>
-        <Link to="/signup">Register</Link>
-        <Link to="/spot">Make a Spot</Link>
+          <div></div>}
+        <nav className="navbar">
+          <Link className="golden" to="/spot">See All Spots</Link>
+          <Link className="golden" to="/signup">Register</Link>
+          <Link className="golden" to="/spot">Make a Spot</Link>
+        </nav>
         <Route path="/spot" render={() => <MakeSpot />} />
         <Route exact path="/spot" render={() => <SpotsContainer />} />
         <Route path="/signup" render={() => <Register handleRegister={this.handleRegister} />} />
         <Route path="/spot/:id" render={(props) => (
-          <SingleSpot  spotId={props.match.params.id} user={this.state.currentUser} />
+          <SingleSpot spotId={props.match.params.id} user={this.state.currentUser} />
         )} />
-        
+
+        <Footer />
+
       </div>
     );
   }
