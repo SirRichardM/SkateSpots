@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Route } from "react-router-dom"
+import { Link, Route, withRouter } from "react-router-dom"
 import './App.css';
 import Header from "./components/header"
 import Login from "./components/Login"
@@ -29,6 +29,7 @@ class App extends Component {
     e.preventDefault();
     const currentUser = await loginUser(loginData)
     this.setState({ currentUser });
+    this.props.history.push("/spot/new")
 
   }
 
@@ -86,9 +87,9 @@ class App extends Component {
         <nav className="navbar">
           <Link className="golden" to="/spot">See All Spots</Link>
           <Link className="golden" to="/signup">Register</Link>
-          <Link className="golden" to="/spot">Make a Spot</Link>
+          <Link className="golden" to="/spot/new">Make a Spot</Link>
         </nav>
-        <Route path="/spot" render={() => <MakeSpot />} />
+        <Route path="/spot/new" render={() => <MakeSpot />} />
         <Route exact path="/spot" render={() => <SpotsContainer />} />
         <Route path="/signup" render={() => <Register handleRegister={this.handleRegister} />} />
         <Route path="/spot/:id" render={(props) => (
@@ -102,4 +103,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);

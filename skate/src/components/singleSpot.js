@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Link, Route } from "react-router-dom"
+import { Link, Route, withRouter } from "react-router-dom"
 import axios from "axios"
 import { verifyUser, singleSpots, putSpot, deleteSpot, commentDaSpot, getComments } from "../services/apiHelper"
 
@@ -102,6 +102,7 @@ class SingleSpot extends Component {
   handleDelete = async (e) => {
     e.preventDefault();
     deleteSpot(this.state.spot_Id)
+    this.props.history.push("/spot")
   }
 
   postComment = async (e, comment) => {
@@ -113,39 +114,45 @@ class SingleSpot extends Component {
 
 
   render() {
-    
+
     console.log(this.props.user)
-    
-      console.log(this.state.userId);
+
+    console.log(this.state.userId);
     // console.log(this.state.spotUp)
     // console.log(this.state.comments)
     return (
       <div>
         {this.state.spot &&
           <div className="single">
-          <img src={this.state.spot.photo_main} />
-          <div className="locinfo">
-            <h2>{this.state.spot.name}</h2>
-            <h3>{this.state.spot.boro}</h3>
-            <h3>{this.state.spot.address}</h3>
-            <h4>{this.state.spot.trains}</h4>
+            <div className="locinfo">
+              <img src={this.state.spot.photo_main} />
+              {/* <div className="locinfo"> */}
+              <div className="wtf">
+                <h2>{this.state.spot.name}</h2>
+                <h3>{this.state.spot.boro}</h3>
+                <h3>{this.state.spot.address}</h3>
+                <h4>{this.state.spot.trains}</h4>
+              </div>
+            </div>
+            <br />
+            <div>
+              <h4>{this.state.spot.obstacles}</h4>
+              <p>{this.state.spot.description}</p>
+              <p>{this.state.spot.noteworthy}</p>
           </div>
-          <br/>
-            <h4>{this.state.spot.obstacles}</h4>
-            <p>{this.state.spot.description}</p>
-            <p>{this.state.spot.noteworthy}</p>
+          <div className="singlespotpics">
             <img src={this.state.spot.photo2} />
             <img src={this.state.spot.photo3} />
             <img src={this.state.spot.phto4} />
             <img src={this.state.spot.photo5} />
-
+            </div>
 
           </div>
         }
 
 
 
-        {localStorage.getItem('id') == this.state.userId &&
+        {localStorage.getItem('id') == this.state.userId && localStorage.getItem('name') &&
           <form onSubmit={(e) => this.handleUpdate(e, this.state.spotUp)}>
             <div className="submitForm">
 
@@ -206,40 +213,40 @@ class SingleSpot extends Component {
                 value={this.state.spotUp.photo_main}
                 placeholder="Noteworthy"
                 onChange={e => this.handleChange(e)}
-            />
+              />
 
-<input
+              <input
                 type="text"
                 name="photo2"
                 value={this.state.spotUp.photo2}
                 placeholder="Photo 2"
                 onChange={e => this.handleChange(e)}
-            />
+              />
 
-<input
+              <input
                 type="text"
                 name="photo3"
                 value={this.state.spotUp.photo3}
                 placeholder="Photo 3"
                 onChange={e => this.handleChange(e)}
-            />
+              />
 
-<input
+              <input
                 type="text"
                 name="phto4"
                 value={this.state.spotUp.phto4}
                 placeholder="Photo 4"
                 onChange={e => this.handleChange(e)}
-            />
+              />
 
-<input
+              <input
                 type="text"
                 name="photo5"
                 value={this.state.spotUp.photo5}
                 placeholder="Photo 5"
                 onChange={e => this.handleChange(e)}
-            />
-            
+              />
+
 
 
               <input type="submit" />
@@ -259,17 +266,17 @@ class SingleSpot extends Component {
           </div>
         )}
 
-
-        <form onSubmit={(e) => this.postComment(e, this.state.commentData)}>
-          <input
-            type="text"
-            name="text"
-            value={this.state.commentData.text}
-            onChange={e => this.handleChange(e)}
-          />
-          <button>Tell us your thoughts..</button>
-        </form>
-
+        {localStorage.getItem('name') &&
+          <form onSubmit={(e) => this.postComment(e, this.state.commentData)}>
+            <input
+              type="text"
+              name="text"
+              value={this.state.commentData.text}
+              onChange={e => this.handleChange(e)}
+            />
+            <button>Tell us your thoughts..</button>
+          </form>
+        }
 
       </div>
 
@@ -280,4 +287,4 @@ class SingleSpot extends Component {
 
 }
 
-export default SingleSpot;
+export default withRouter(SingleSpot);

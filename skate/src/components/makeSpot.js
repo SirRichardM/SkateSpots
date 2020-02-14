@@ -39,8 +39,9 @@ class MakeSpot extends Component {
   render() {
    
     return(
-      <div>
-        <form onSubmit={(e) => this.createSpot(e, this.state)}>
+      <div className="makeform">
+
+        <form className="makeform" onSubmit={(e) => this.createSpot(e, this.state)}>
           <h2>Add a spot</h2>
           <label htmlFor="name">Name</label>
           <input
@@ -110,6 +111,44 @@ class MakeSpot extends Component {
                 name="photo_main"
                 value={this.state.photo_main}
                 placeholder="Main Photo"
+                onChange={e => this.handleChange(e)}
+          />
+
+<label htmlFor="photo2">Upload 2nd Photo</label>
+           <input
+                type="text"
+                name="photo2"
+                value={this.state.photo2}
+                placeholder="Photo2"
+                onChange={e => this.handleChange(e)}
+          />
+          
+          <label htmlFor="photo3">Upload 3rd Photo</label>
+
+          <input
+                type="text"
+                name="photo3"
+                value={this.state.photo3}
+                placeholder="Photo3"
+                onChange={e => this.handleChange(e)}
+          />
+
+<label htmlFor="phto4">Upload 4th photo here</label>
+          
+          <input
+                type="text"
+                name="phto4"
+                value={this.state.phto4}
+                placeholder="Photo 4"
+                onChange={e => this.handleChange(e)}
+          />
+          <label htmlFor="photo5">Upload 5th photo here</label>
+          
+          <input
+                type="text"
+                name="photo5"
+                value={this.state.photo5}
+                placeholder="Photo5"
                 onChange={e => this.handleChange(e)}
               />
 

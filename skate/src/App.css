@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+body {
+  font-family: 'Alegreya', serif;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -46,7 +50,6 @@
   margin-top: 0;
   font-size: 5vw;
   margin-bottom: 0;
-  
 }
 
 /* img {
@@ -93,31 +96,48 @@
 .single {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 3vh;
+  margin: 3vh 20vw;
+  
+}
+
+.singlespotpics {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 4vw;
+  grid-row-gap: 4vh;
 }
 
 .showcase {
   margin: 2vh 10vw;
-  
+  /* margin: 0 auto; */
   border-bottom: 1vh solid black;
-  padding: 2vh;
+  padding: 2.5vh;
   color: white;
   font-family: 'Permanent Marker', cursive;
   font-size: 1vw;
   display: grid;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: row;
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-column-gap: 4vw;
   grid-row-gap: 4vh;
+  
+  
  
 }
 
-.showcase > img{
-  border-top-right-radius: 5px;
+
+
+.showcase  img{
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  width: 100%;
+  margin-bottom: 0;
   
 }
+
+
 
 button {
   font-family: 'Permanent Marker', cursive;
@@ -128,6 +148,7 @@ button {
 }
 img {
   width: 25vw;
+  height: 25vh;
   background-image: url("https://4.bp.blogspot.com/-FLUMgLDPjSE/T1OLAP5Vf4I/AAAAAAAAAHo/nrhOS84KZjk/s1600/NYC-Skateboard.jpg");
   background-size: cover;
 }
@@ -135,7 +156,9 @@ img {
 .goaway {
   text-decoration: none;
   color: black;
-  text-shadow: .5vw .5vw goldenrod;
+  text-shadow: .25vw .25vw goldenrod;
+  font-size: 3vh;
+  margin-top: 0;
 }
 
 a {
@@ -183,9 +206,7 @@ input {
   
 }
 
-.indyshowcase {
-  border-radius: 5px;
-}
+
 
 .intro {
   float: left;
@@ -213,4 +234,40 @@ input {
   margin: 2vh 25vw;
   padding-top: 1vh;
   padding-bottom: 1vh;
+}
+
+.locinfo  {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.wtf {
+  margin-left: 10vw;
+}
+
+.single  {
+  margin-top: 4vh;; 
+}
+
+.makeform {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  margin-bottom: 0;
+}
+
+.goaway {
+  pointer-events: none;
+}
+
+.skate {
+  background: none;
+}
+
+.skate :hover {
+  background-image: url(https://media2.giphy.com/media/12JRSmZRvCLjgc/giphy.gif?cid=790b7611970c7242a5572ec29499442a85aaac866d36a6a8&rid=giphy.gif);
+  background-size: cover;
 }
