@@ -82,13 +82,21 @@ export const getComments = async (id) => {
   return resp.data
 }
 
+export const brooklynSpots = async () => {
+  const resp = await api.get('/brooklyn');
+  console.log(resp)
+  return resp.data
+}
+
+
 export const manSpots = async () => {
   const resp = await api.get('/manhattan');
   console.log(resp)
   return resp.data
 }
 
-export const brookSpots = async () => {
-  const resp = await api.get('/brooklyn');
+export const queenSpots = async () => {
+  const resp = await api.get("/queens")
+  console.log(resp)
   return resp.data
 }

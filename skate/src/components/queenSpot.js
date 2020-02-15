@@ -1,33 +1,32 @@
 import React, { Component } from "react"
 import { Link, Route } from "react-router-dom"
-import { brooklynSpots, verifyUser} from "../services/apiHelper"
+import { queenSpots, verifyUser} from "../services/apiHelper"
 
-class BrookSpots extends Component {
+class QSpots extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      bkSpots: []
+      qSpots: []
     }
   }
 
-  readBkSpots = async () => {
-    const bkSpots = await brooklynSpots();
-    console.log(bkSpots)
-    this.setState({ bkSpots })
+  readQSpots = async () => {
+    const qSpots = await queenSpots();
+    console.log( qSpots)
+    this.setState({ qSpots })
   }
 
   componentDidMount = async () => {
     verifyUser();
-    this.readBkSpots();
+    this.readQSpots();
   }
-
 
   render() {
     console.log(this.state);
     return (
       <div className="showcase">
-        {this.state.bkSpots.map((spot, index) => (
+        {this.state.qSpots.map((spot, index) => (
           <div key={index} className="indyshowcase">
             <Link to={`/spot/${spot.id}`}>
               {(spot.photo_main) ?
@@ -52,4 +51,4 @@ class BrookSpots extends Component {
 
 }
 
-export default BrookSpots;
+export default QSpots;

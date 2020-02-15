@@ -91,7 +91,7 @@ class App extends Component {
           <Link className="golden" to="/signup">Register</Link>
           <Link className="golden" to="/spot/new">Make a Spot</Link>
           <Link className="golden" to="/manhattan">Manhattan Spots</Link>
-          <Link className="golden" to="/brookyln">Brooklyn Spots</Link>
+          <Link className="golden" to="/brooklyn">Brooklyn Spots</Link>
 
 
         </nav>
@@ -102,7 +102,7 @@ class App extends Component {
           <SingleSpot spotId={props.match.params.id} user={this.state.currentUser} />
         )} />
         <Route exact path="/manhattan" render={() => <ManSpots />} />
-        <Route exact path="/brooklyn" render={() => <BrookSpots />} />
+        <Route  path="/brooklyn" render={() => <BrookSpots />} />
 
         <Footer />
 

@@ -1,10 +1,11 @@
 import React, { Component } from "react"
 // import { AllSpots } from "./services/apiHelper"
-import { indexSpots, verifyUser, manSpots } from "../services/apiHelper"
+import { indexSpots, verifyUser, manSpots, brooklynSpots } from "../services/apiHelper"
 import { Link, Route } from "react-router-dom"
 import SingleSpot from "./singleSpot"
 import AllSpots from "./alllSpots"
 import ManSpots from "./manhattanSpots"
+import BrookSpots from "./brookSpots"
 
 
 class SpotsContainer extends Component {
@@ -12,7 +13,8 @@ class SpotsContainer extends Component {
     super(props)
     this.state = {
       spots: null,
-      manhatSpots: null
+      manhatSpots: null,
+      bkspots: null
     }
   }
 
@@ -31,19 +33,28 @@ class SpotsContainer extends Component {
     this.setState({ manhatSpots })
   }
 
+  readBkSpots = async () => {
+    const bkspots = await brooklynSpots();
+    console.log(bkspots)
+    this.setState({ bkspots })
+  }
+  
+
   componentDidMount = async () => {
     verifyUser();
     this.readAllSpots();
     this.readManSpots();
+    this.readBkSpots();
   }
 
 
   render() {
-    console.log(this.state.manhatSpots)
+    console.log(this.state.bkspots)
     return (
       <div>
         {this.state.spots && <AllSpots spots={this.state.spots} />}
         {/* {this.state.manhatSpots && <ManSpots spots={this.state.manhatSpots} />} */}
+       
 
         
 
