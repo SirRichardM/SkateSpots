@@ -13,6 +13,7 @@ import Footer from "./components/footer"
 import ManSpots from "./components/manhattanSpots"
 import BrookSpots from "./components/brookSpots"
 import Qspots from "./components/queenSpot"
+import BronxSpots from "./components/bronxSpots"
 
 
 class App extends Component {
@@ -94,6 +95,7 @@ class App extends Component {
           <Link className="golden" to="/manhattan">Manhattan Spots</Link>
           <Link className="golden" to="/brooklyn">Brooklyn Spots</Link>
           <Link className="golden" to="/queens">Queens Spots</Link>
+          <Link className="golden" to="/bronx">Bronx Spots</Link>
 
 
         </nav>
@@ -106,6 +108,7 @@ class App extends Component {
         <Route exact path="/manhattan" render={() => <ManSpots />} />
         <Route path="/brooklyn" render={() => <BrookSpots />} />
         <Route path="/queens" render={() => <Qspots />} />
+        <Route path="/bronx" render={() => <BronxSpots />} />
 
         <Footer />
 

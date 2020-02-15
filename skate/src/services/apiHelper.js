@@ -100,3 +100,9 @@ export const queenSpots = async () => {
   console.log(resp)
   return resp.data
 }
+
+export const bxSpots = async () => {
+  const resp = await api.get("/bronx")
+  console.log(resp)
+  return resp.data
+}
