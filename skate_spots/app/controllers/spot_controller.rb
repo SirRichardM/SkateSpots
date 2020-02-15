@@ -32,6 +32,11 @@ class SpotController < ApplicationController
     json_response(@spotBx)
   end
 
+  def staten
+    @spotStat = Spot.where( boro: "staten island")
+    json_response(@spotStat)
+  end
+
 
 
   def show

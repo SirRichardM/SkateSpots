@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'brooklyn', to: 'spot#brooklyn'
   get 'queens', to: 'spot#queens'
   get 'bronx', to: 'spot#bronx'
+  get 'staten', to: 'spot#staten'
 
   resources :user
 
