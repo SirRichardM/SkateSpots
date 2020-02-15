@@ -11,7 +11,29 @@ class SpotController < ApplicationController
     @spot = current_user.spots.create!(spot_params)
     json_response(@spot, :created)
   end
-  
+
+  def manhattan
+    @spotM = Spot.where( boro: "manhattan")
+    json_response(@spotM)
+  end
+
+  def queens
+    @spotQ = Spot.where( boro: "queens")
+    json_response(@spotQ)
+  end
+
+  def brooklyn
+    @spotB = Spot.where( boro: "brooklyn")
+    json_response(@spotB)
+  end
+
+  def bronx
+    @spotBx = Spot.where( boro: "bronx")
+    json_response(@spotBx)
+  end
+
+
+
   def show
   json_response(@spot)
   end
