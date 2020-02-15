@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   post 'signup', to: 'user#create'
   get 'manhattan', to: 'spot#manhattan'
   get 'brooklyn', to: 'spot#brooklyn'
+  get 'queens', to: 'spot#queens'
 
   resources :user
 
