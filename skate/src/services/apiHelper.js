@@ -106,3 +106,8 @@ export const bxSpots = async () => {
   console.log(resp)
   return resp.data
 }
+
+export const statSpots = async () => {
+  const resp = await api.get("/staten")
+  return resp.data
+}
