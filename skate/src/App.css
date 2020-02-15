@@ -4,6 +4,7 @@
 
 body {
   font-family: 'Alegreya', serif;
+  background-color: #FBFCD4;
 }
 
 .App-logo {
@@ -263,11 +264,15 @@ a {
   pointer-events: none;
 }
 
-.skate {
-  background: none;
-}
+
 
 .skate :hover {
   background-image: url(https://media2.giphy.com/media/12JRSmZRvCLjgc/giphy.gif?cid=790b7611970c7242a5572ec29499442a85aaac866d36a6a8&rid=giphy.gif);
   background-size: cover;
+}
+
+
+.indyshowcase {
+  background-color: white;
+  border-radius: 10px;
 }

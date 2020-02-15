@@ -5,7 +5,7 @@ import { checkPropTypes } from "prop-types"
 
 function Header(props) {
 
-  console.log(props)
+  
 
   return (
     <div className="header" >

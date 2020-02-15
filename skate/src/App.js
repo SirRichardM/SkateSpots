@@ -10,6 +10,8 @@ import MakeSpot from "./components/makeSpot"
 import SingleSpot from "./components/singleSpot"
 import SpotsContainer from "./components/spotsContainer";
 import Footer from "./components/footer"
+import ManSpots from "./components/manhattanSpots"
+import BrookSpots from "./components/brookSpots"
 
 
 class App extends Component {
@@ -29,7 +31,7 @@ class App extends Component {
     e.preventDefault();
     const currentUser = await loginUser(loginData)
     this.setState({ currentUser });
-    this.props.history.push("/spot/new")
+    this.props.history.push("/spot")
 
   }
 
@@ -88,13 +90,19 @@ class App extends Component {
           <Link className="golden" to="/spot">See All Spots</Link>
           <Link className="golden" to="/signup">Register</Link>
           <Link className="golden" to="/spot/new">Make a Spot</Link>
+          <Link className="golden" to="/manhattan">Manhattan Spots</Link>
+          <Link className="golden" to="/brookyln">Brooklyn Spots</Link>
+
+
         </nav>
         <Route path="/spot/new" render={() => <MakeSpot />} />
         <Route exact path="/spot" render={() => <SpotsContainer />} />
         <Route path="/signup" render={() => <Register handleRegister={this.handleRegister} />} />
-        <Route path="/spot/:id" render={(props) => (
+        <Route exact path path="/spot/:id" render={(props) => (
           <SingleSpot spotId={props.match.params.id} user={this.state.currentUser} />
         )} />
+        <Route exact path="/manhattan" render={() => <ManSpots />} />
+        <Route exact path="/brooklyn" render={() => <BrookSpots />} />
 
         <Footer />
 

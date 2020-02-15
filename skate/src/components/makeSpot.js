@@ -62,7 +62,7 @@ class MakeSpot extends Component {
           <input
             type="text"
             name="boro"
-            value={this.state.boro}
+            value={this.state.boro.toLowerCase()}
             onChange={this.handleChange}
           />
 
