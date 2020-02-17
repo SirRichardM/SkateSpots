@@ -32,15 +32,33 @@ Spot.create( name: "Farragut Ledges", address:"228 York St, Brooklyn, NY 11201",
 Spot.create( name: "Flushing Meadows Park", address:"Unisphere
 Flushing Meadows-Corona Park, Corona, NY 11368", boro: "queens", trains: "Mets - Willets Point 7-train", obstacles: "The fountain gap, stairs, ledges and now the maloof park", rating: 5, description: "Aside from the Brooklyn Banks this is probably the most iconic NY skate spot there is. The park has a ton of stuff to skate although it is pretty crusty at this point. The fountain has ledges and the infamous grate gap. Also now they have the maloof money cup park that is actually a ton of fun to skate", noteworthy: "", photo_main: "https://static01.nyt.com/images/2011/08/26/arts/26JPFLUSHING5/26JPFLUSHING5-articleLarge.jpg?quality=75&auto=webp&disable=upscale", photo2: "https://galaxypro.s3.amazonaws.com/spot-media/437/437-flushing-meadows-skate.jpg", photo3: "https://cdn.shopify.com/s/files/1/0342/5665/files/paul_berrics_923ab711-e432-4c14-8618-1c607571256e.jpg?1105", phto4: "https://pbs.twimg.com/media/D_TiuIlWsAAC9Xc.jpg", user_id: 1)
 
-Spot.create( name: "Con-Edison Banks", address:"20-02 31st St, Astoria, NY 11105", boro: "queens", trains: "Ditmas Blvd N/W-trains", obstacles: "Big leagues shit", rating: 5, description: "Well known but infamously hard place to skate. You won't get kicked out but you have to be a good skateboarde to get anything here. Also it is ROUGH ground.", noteworthy: "", photo_main: "https://i.pinimg.com/originals/8e/b5/ca/8eb5ca3df78fbfd28c95de1675a37204.jpg", photo2: "https://66.media.tumblr.com/0a03451660c95367c7ab00d693b8d99b/tumblr_nsmygb8TPP1ut9y33o4_1280.jpg", photo3: "", phto4: "", user_id: 1)
+Spot.create( name: "Con-Edison Banks", address:"20-02 31st St, Astoria, NY 11105", boro: "queens", trains: "Ditmas Blvd N/W-trains", obstacles: "Big leagues shit", rating: 5, description: "Well known but infamously hard place to skate. You won't get kicked out but you have to be a good skateboarde to get anything here. Also it is ROUGH ground.", noteworthy: "", photo_main: "https://i.pinimg.com/originals/8e/b5/ca/8eb5ca3df78fbfd28c95de1675a37204.jpg", photo2: "https://66.media.tumblr.com/0a03451660c95367c7ab00d693b8d99b/tumblr_nsmygb8TPP1ut9y33o4_1280.jpg", photo3: "https://66.media.tumblr.com/b85bf8c630caa2cf7841170b7bf77a7e/tumblr_nsmygb8TPP1ut9y33o3_1280.jpg", phto4: "https://quartersnacks.com/wp-content/uploads/2010/05/P4150014.jpg", user_id: 1)
+
+Spot.create( name: "Vernon Jackson", address:"47-29 Vernon Blvd, Long Island City, NY 11101", boro: "queens", trains: "Vernon Blvd 7-train", obstacles: "Pink ledges in a basketball court and a frontside for regular metal ledge over a small gap", rating: 5, description: "Great spot with lots of fun stuff to skate. Mainly ledges that are a decent height. You won't get kicked out here but many times the park is being used to other activities and you will be the asshole", noteworthy: "", photo_main: "https://quartersnacks.com/wp-content/uploads/2010/05/P4150091.jpg", photo2: "https://quartersnacks.com/wp-content/uploads/2010/05/vernonjackson.jpg", photo3: "https://quartersnacks.com/wp-content/uploads/2010/05/P4150089.jpg", phto4: "https://quartersnacks.com/wp-content/uploads/2010/05/P4150092.jpg", user_id: 1)
+
+Spot.create( name: "Bronx Courthouse", address:"", boro: "bronx", trains: "161st St-Yankee 6-train", obstacles: "stairs and drops", rating: 5, description: "This one is hard to skate. Recommened you only go here if you are there to film something. You can go during the weekend when the courhouse is closed but not during the week as you will get kicked out", noteworthy: "", photo_main: "https://storage.googleapis.com/fsscs1/images/large/47d3420525cc4c49067c8692088bd2db.jpg", photo2: "https://quartersnacks.com/wp-content/uploads/2011/07/P6110033.jpg", photo3: "https://quartersnacks.com/wp-content/uploads/2011/07/P6110014.jpg", phto4: "https://quartersnacks.com/wp-content/uploads/2011/07/P6110024.jpg", photo5: "https://quartersnacks.com/wp-content/uploads/2011/07/P6110029.jpg", user_id: 1)
+
+Spot.create( name: "", address:"", boro: "brooklyn", trains: "", obstacles: "", rating: 5, description: ".", noteworthy: "", photo_main: "", photo2: "", photo3: "", phto4: "", photo5: "", user_id: 1)
 
 Spot.create( name: "", address:"", boro: "brooklyn", trains: "", obstacles: "", rating: 5, description: ".", noteworthy: "", photo_main: "", photo2: "", photo3: "", phto4: "", user_id: 1)
 
-Spot.create( name: "", address:"", boro: "brooklyn", trains: "", obstacles: "", rating: 5, description: ".", noteworthy: "", photo_main: "", photo2: "", photo3: "", phto4: "", user_id: 1)
+Spot.create( name: "", address:"", boro: "brooklyn", trains: "", obstacles: "", rating: 5, description: ".", noteworthy: "", photo_main: "", photo2: "", photo3: "", phto4: "", photo5: "", user_id: 1)
 
-Spot.create( name: "", address:"", boro: "brooklyn", trains: "", obstacles: "", rating: 5, description: ".", noteworthy: "", photo_main: "", photo2: "", photo3: "", phto4: "", user_id: 1)
+Spot.create( name: "", address:"", boro: "brooklyn", trains: "", obstacles: "", rating: 5, description: ".", noteworthy: "", photo_main: "", photo2: "", photo3: "", phto4: "", photo5: "", user_id: 1)
 
-Spot.create( name: "", address:"", boro: "brooklyn", trains: "", obstacles: "", rating: 5, description: ".", noteworthy: "", photo_main: "", photo2: "", photo3: "", phto4: "", user_id: 1)
+Spot.create( name: "", address:"", boro: "brooklyn", trains: "", obstacles: "", rating: 5, description: ".", noteworthy: "", photo_main: "", photo2: "", photo3: "", phto4: "", photo5: "", user_id: 1)
+
+Spot.create( name: "", address:"", boro: "brooklyn", trains: "", obstacles: "", rating: 5, description: ".", noteworthy: "", photo_main: "", photo2: "", photo3: "", phto4: "", photo5: "", user_id: 1)
+
+Spot.create( name: "", address:"", boro: "brooklyn", trains: "", obstacles: "", rating: 5, description: ".", noteworthy: "", photo_main: "", photo2: "", photo3: "", phto4: "", photo5: "", user_id: 1)
+
+Spot.create( name: "", address:"", boro: "brooklyn", trains: "", obstacles: "", rating: 5, description: ".", noteworthy: "", photo_main: "", photo2: "", photo3: "", phto4: "", photo5: "", user_id: 1)
+
+
+
+
+
+
 
 
 
