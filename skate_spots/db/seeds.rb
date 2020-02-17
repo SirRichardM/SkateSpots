@@ -45,7 +45,7 @@ Spot.create( name: "Ogden bank to ledge", address:"1243 Dr Martin Luther King Jr
 
 Spot.create( name: "Triangle Park", address:"1218 Westchester Ave, The Bronx, NY 10459", boro: "bronx", trains: "Simpson St 2/5 Trains", obstacles: "Ledges over stuffs", rating: 5, description: "You will not get kicked out here but be away the ground is rough and the ledges are getting a bit crusty", noteworthy: "", photo_main: "https://quartersnacks.com/wp-content/uploads/2015/06/brady-back-tail.jpg", photo2: "https://storage.googleapis.com/fsscs1/images/large/aa8e548b35d877bd57c8804432a88977.jpg", photo3: "https://quartersnacks.com/wp-content/uploads/2018/01/hayes3.jpg", phto4: "", photo5: "", user_id: 1)
 
-Spot.create( name: "", address:"", boro: "brooklyn", trains: "", obstacles: "", rating: 5, description: ".", noteworthy: "", photo_main: "", photo2: "", photo3: "", phto4: "", photo5: "", user_id: 1)
+Spot.create( name: "ABC Ledges", address:"‎555 Page Avenue, Staten Island, NY", boro: "staten island", trains: "None Really", obstacles: "Perfect Ledges", rating: 5, description: "One of the best spots in the five boroughs but also one of the least skated since its hard to find. The alphabet is written on them hence the name", noteworthy: "", photo_main: "https://4.bp.blogspot.com/_cEnmA9o-PWw/SYtHnBPKbDI/AAAAAAAABJc/dVPhJevQfaY/s400/Reid+ABC+Ledge+Line+THUMB.bmp", photo2: "https://i.ytimg.com/vi/Lxdk6Gih2jA/hqdefault.jpg", photo3: "https://i.ytimg.com/vi/-hXtxSsK-WU/maxresdefault.jpg", phto4: "", photo5: "", user_id: 1)
 
 Spot.create( name: "", address:"", boro: "brooklyn", trains: "", obstacles: "", rating: 5, description: ".", noteworthy: "", photo_main: "", photo2: "", photo3: "", phto4: "", photo5: "", user_id: 1)
 
