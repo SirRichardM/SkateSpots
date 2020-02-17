@@ -19,6 +19,11 @@ Spot.create( name: "Paine Webber Ledges", address:"1290 6th Ave, New York, NY 10
 
 Spot.create( name: "Lenox Ledges", address:"125 W 110th St, New York, NY 10026", boro: "manhattan", trains: "110th St 2/3 Trains", obstacles: "5 perfect ledges in a row", rating: 5, description: "One of the best and easiest ledge spots to skate in the city. You most likely will not be bothered while skating here. Ledges are buttery and ground is relatively smooth", noteworthy: "", photo_main: "https://quartersnacks.com/images/sb/ishodbsnoseblunt.jpg", photo2: "https://storage.googleapis.com/fsscs1/images/large/36e2415129d568ac6aee9e4aaf6d91be.jpg", photo3: "https://quartersnacks.com/wp-content/uploads/2010/05/lenox1.jpg", phto4: "https://quartersnacks.com/wp-content/uploads/2010/05/lenox2.jpg", photo5: "https://lh3.googleusercontent.com/proxy/6nAM9I_lGsZZClFHlDWXCAymHD-0pBHnc88p6MKojlaxIzt8-b5PUr44tvibMvI8tHPNANcytL2scpaggnycZTV5tg943QMlAi78dl4IPACX8xGiFtNx7At9", user_id: 1)
 
+Spot.create( name: "Colombia University", address:"420 W 118th, New York, NY 10027", boro: "manhattan", trains: "125th St A/C/B/D trains", obstacles: "A ton of stuff to skate", rating: 5, description: "You will get kicked out here but there are many things to skate so you can shuffle around.", noteworthy: "", photo_main: "https://quartersnacks.com/wp-content/uploads/2010/05/columbia-6-500x375.jpg", photo2: "https://quartersnacks.com/wp-content/uploads/2010/05/columbia-5.jpg", photo3: "https://quartersnacks.com/wp-content/uploads/2010/05/columbia-9.jpg", phto4: "https://quartersnacks.com/wp-content/uploads/2010/05/columbia-2.jpg", photo5: "", user_id: 1)
+
+
+Spot.create( name: "", address:"", boro: "manhattan", trains: "", obstacles: "", rating: 5, description: ".", noteworthy: "", photo_main: "", photo2: "", photo3: "", phto4: "", photo5: "", user_id: 1)
+
 Spot.create( name: "", address:"", boro: "manhattan", trains: "", obstacles: "", rating: 5, description: ".", noteworthy: "", photo_main: "", photo2: "", photo3: "", phto4: "", photo5: "", user_id: 1)
 
 
