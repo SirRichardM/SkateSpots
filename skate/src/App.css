@@ -4,7 +4,7 @@
 
 body {
   font-family: 'Alegreya', serif;
-  background-color: #FBFCD4;
+  background-color: #141414;
 }
 
 .App-logo {
@@ -275,4 +275,23 @@ a {
 .indyshowcase {
   background-color: white;
   border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .head {
+    font-size: 10vw;
+  }
+
+  .pic {
+    background-size: contain;
+    
+    background-repeat: no-repeat;
+  }
 }
