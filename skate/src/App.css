@@ -331,6 +331,11 @@ a {
   text-align: left;
 }
 
+.dropdownmenu a:hover {
+  background-color: #670303 ;
+  color: goldenrod;
+}
+
 
 
 
