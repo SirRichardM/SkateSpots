@@ -106,7 +106,7 @@ class SingleSpot extends Component {
   }
 
   postComment = async (e, comment) => {
-    e.preventDefault();
+    
     verifyUser();
     commentDaSpot(this.props.spotId, comment);
 
@@ -135,7 +135,7 @@ class SingleSpot extends Component {
               </div>
             </div>
             <br />
-            <div>
+            <div className="info">
               <h4>{this.state.spot.obstacles}</h4>
               <p>{this.state.spot.description}</p>
               <p>{this.state.spot.noteworthy}</p>
