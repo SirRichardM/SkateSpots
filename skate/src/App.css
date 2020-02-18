@@ -100,6 +100,10 @@ body {
   margin: 3vh 20vw;
   background-color: white;
   padding: 1.75vh;
+  padding-bottom: 3vh;
+  padding-top: 3vh;
+  border-radius: 10px;
+
   
 }
 
@@ -166,7 +170,7 @@ button {
 img {
   width: 25vw;
   height: 25vh;
-  background-image: url("https://4.bp.blogspot.com/-FLUMgLDPjSE/T1OLAP5Vf4I/AAAAAAAAAHo/nrhOS84KZjk/s1600/NYC-Skateboard.jpg");
+  background-image: url("https://modcloth.wpengine.com/wp-content/uploads/2013/05/0316bf3c9cb096cdb26e34a52c8be2b51.jpg");
   background-size: cover;
 }
 
@@ -241,6 +245,8 @@ input {
   margin: 2vh 15vw;
   font-family: 'Permanent Marker', cursive;
   font-size: 2vw;
+  color: white;
+  text-shadow: .25vw .25vw goldenrod;
 }
 
 .register input {
@@ -294,7 +300,36 @@ a {
   border-radius: 10px;
 }
 
+.comments {
+  background-color: white;
+  margin: 2vh 30vw;
+  border-radius: 10px;
+  border: .5vw solid #670303;
+  padding: 1vw;
 
+}
+
+.dropdownmenu {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdownmenu {
+  display: block;
+}
+
+.dropdownmenu a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
 
 
 

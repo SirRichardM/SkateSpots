@@ -93,12 +93,16 @@ class App extends Component {
           <Link className="golden" to="/spot">See All Spots</Link>
           <Link className="golden" to="/signup">Register</Link>
           <Link className="golden" to="/spot/new">Make a Spot</Link>
+          <div className="dropdown">
+            <a className="golden">Spots by Boro</a>
+            <div className="dropdownmenu">
           <Link className="golden" to="/manhattan">Manhattan Spots</Link>
           <Link className="golden" to="/brooklyn">Brooklyn Spots</Link>
           <Link className="golden" to="/queens">Queens Spots</Link>
           <Link className="golden" to="/bronx">Bronx Spots</Link>
           <Link className="golden" to="/staten">Staten Island Spots</Link>
-
+          </div>
+          </div>
 
         </nav>
         <Route path="/spot/new" render={() => <MakeSpot />} />
