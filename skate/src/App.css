@@ -115,6 +115,11 @@ body {
   border: .5vw solid goldenrod;
 }
 
+.mainsingle {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2vw;
+}
+
 .info {
   padding-bottom: 2vh;
 }
@@ -252,6 +257,7 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-bottom: 2vh;
 }
 
 .wtf {

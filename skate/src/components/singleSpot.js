@@ -128,7 +128,7 @@ class SingleSpot extends Component {
               <img src={this.state.spot.photo_main} />
               {/* <div className="locinfo"> */}
               <div className="wtf">
-                <h2>{this.state.spot.name}</h2>
+                <h2 className="mainsingle">{this.state.spot.name}</h2>
                 <h3>{this.state.spot.boro}</h3>
                 <h3>{this.state.spot.address}</h3>
                 <h4>{this.state.spot.trains}</h4>
