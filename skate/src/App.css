@@ -49,7 +49,7 @@ body {
   font-family: 'Shrikhand', cursive;
   text-align: left;
   margin-top: 0;
-  font-size: 5vw;
+  font-size: 6vw;
   margin-bottom: 0;
 }
 
@@ -80,6 +80,7 @@ body {
 .headbutt {
   margin-right: 5vw;
   margin-top: 5vh;
+  font-size: 2.5vw;
 
 }
 
@@ -126,6 +127,7 @@ body {
 
 .info {
   padding-bottom: 2vh;
+  font-size: 2.5vh;
 }
 
 .showcase {
@@ -244,10 +246,11 @@ input {
   flex-direction: column;
   margin: 2vh 15vw;
   font-family: 'Permanent Marker', cursive;
-  font-size: 2vw;
-  color: white;
+  font-size: 2.5vw;
+  color: #670303;
   text-shadow: .25vw .25vw goldenrod;
 }
+
 
 .register input {
   height: 4vh;
@@ -336,6 +339,20 @@ a {
   color: goldenrod;
 }
 
+.indyshowcase:hover {
+  background-color: #670303;
+  background-image: url(https://media.giphy.com/media/12JRSmZRvCLjgc/giphy.gif);
+  
+}
+
+.skatingback {
+  background-image: url(https://nssdata.s3.amazonaws.com/images/galleries/11798/exclusive-watch-ari-marcopoulos-capture-mark-gonzales-and-tyshawn-jones-shredding-nyc-1487597610.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0 10vw;
+}
+
+
 
 
 
@@ -350,5 +367,59 @@ a {
     background-size: contain;
     
     background-repeat: no-repeat;
+  }
+
+  .showcase {
+    grid-template-columns: 50% 50%;
+  }
+
+  .singlespotpics {
+    grid-template-columns: 100%;
+    width: 100%;
+  }
+
+  .single {
+    width: none;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .single img {
+    width: inherit;
+    height: 50vh;
+    padding-left:;
+    align-content: center;
+  }
+
+  .locinfo {
+    flex-direction: column;
+    font-size: 3.5vh;
+    justify-content: space-evenly;
+  }
+
+  .wtf {
+    margin-left: .001vw;;
+  }
+
+  .locinfo img {
+    height: 50vh;
+  }
+
+  .mainsingle {
+    font-size: 5vh;
+  }
+}
+
+
+@media (max-width: 375px) {
+  .showcase {
+    grid-template-columns: 100%;
+    margin: 0;
+
+  }
+
+  .pic {
+  padding: 0;
+   height: 35vh;
   }
 }
