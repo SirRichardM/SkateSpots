@@ -460,7 +460,7 @@ a {
   .headpass {
     visibility: hidden;
   }
-  
+
 }
 
 
@@ -520,4 +520,9 @@ a {
     width: 5vw;
     
   }
+}
+
+.comintro {
+  font-family: 'Luckiest Guy', cursive;
+  color: white;
 }

@@ -260,7 +260,7 @@ class SingleSpot extends Component {
 
         }
 
-        <h1>Survey says</h1>  
+        <h1 className="comintro">Survey says</h1>  
         <br/>
         {this.state.comments && this.state.comments.map((comment, index) =>
           <div key={index} className="comments">
