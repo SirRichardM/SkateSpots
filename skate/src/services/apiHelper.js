@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "http://localhost:3000"
+  baseURL: "https://immense-forest-21610.herokuapp.com/"
 })
 
 export const loginUser = async (loginData) => {
