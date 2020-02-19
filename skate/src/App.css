@@ -62,7 +62,7 @@ body {
   height: 75vh;
   background-image: url(https://a.espncdn.com/photo/2015/0909/as_nycskate01_2048.jpg);
   background-size: cover;
-  margin-top: 0;
+  /* margin-top: 0; */
   background-attachment: fixed;
 }
 
@@ -307,28 +307,35 @@ a {
 }
 
 .skate {
-  margin-top: 0;
-}
-
-.skate:hover {
-  /* background-image: url(https://media0.giphy.com/media/pIYhEgpzZqYpy/giphy.gif?cid=790b76114c36238640d963e86a95bff772dd9804ec67db76&rid=giphy.gif); */
-  background-size: round;
-  background-repeat: no-repeat;
-  background-color: pink;
+  margin-top: -4px;
+  margin-bottom: -37px;
   
 }
 
+.skate:hover {
+  background-image: url(https://media.giphy.com/media/12JRSmZRvCLjgc/giphy.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: -35px;
+  
+  
+}
+
+.goaway2 {
+  padding-bottom: 2vh;
+}
 
 .indyshowcase {
-  background-color: white;
+  background-color: black;
   /* border-radius: 10px; */
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   margin: 0;
 }
 
-.indyshowcase a:hover {
-  color: white;
+.skate {
+  background-color: white;
+  
 }
 
 .comments {
@@ -517,9 +524,8 @@ a {
 
   .pic {
   height: 20vh;
-  background-size: contain;
   margin-bottom: 0;
-  
+  background-position: contain;
   }
 
   header {

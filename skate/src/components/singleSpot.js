@@ -106,7 +106,7 @@ class SingleSpot extends Component {
   }
 
   postComment = async (e, comment) => {
-    
+
     verifyUser();
     commentDaSpot(this.props.spotId, comment);
 
@@ -122,6 +122,7 @@ class SingleSpot extends Component {
     // console.log(this.state.comments)
     return (
       <div>
+        window.scrollTo(0,0);
         {this.state.spot &&
           <div className="single">
             <div className="locinfo">
@@ -139,12 +140,12 @@ class SingleSpot extends Component {
               <h4>{this.state.spot.obstacles}</h4>
               <p>{this.state.spot.description}</p>
               <p>{this.state.spot.noteworthy}</p>
-          </div>
-          <div className="singlespotpics">
-            <img src={this.state.spot.photo2} />
-            <img src={this.state.spot.photo3} />
-            <img src={this.state.spot.phto4} />
-            <img src={this.state.spot.photo5} />
+            </div>
+            <div className="singlespotpics">
+              <img src={this.state.spot.photo2} />
+              <img src={this.state.spot.photo3} />
+              <img src={this.state.spot.phto4} />
+              <img src={this.state.spot.photo5} />
             </div>
 
           </div>
@@ -260,8 +261,8 @@ class SingleSpot extends Component {
 
         }
 
-        <h1 className="comintro">Survey says</h1>  
-        <br/>
+        <h1 className="comintro">Survey says</h1>
+        <br />
         {this.state.comments && this.state.comments.map((comment, index) =>
           <div key={index} className="comments">
             <h5>{comment.name} says...</h5>  <p>{comment.text}</p>
@@ -270,8 +271,8 @@ class SingleSpot extends Component {
 
         {localStorage.getItem('name') &&
           <form className="cominput" onSubmit={(e) => this.postComment(e, this.state.commentData)}>
-          <input
-            
+            <input
+
               type="text"
               name="text"
               value={this.state.commentData.text}

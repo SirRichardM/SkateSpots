@@ -27,7 +27,7 @@ class AllSpots extends Component {
                 <h2 className="goaway">{spot.name}</h2>
 
                 <h4 className="goaway">{spot.address}</h4>
-                <h4 className="goaway">{spot.boro}</h4>
+                <h4  className="goaway goaway2">{spot.boro}</h4>
               </div>
             </Link>
 
