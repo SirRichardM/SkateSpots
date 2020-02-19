@@ -81,6 +81,7 @@ body {
   margin-right: 5vw;
   margin-top: 5vh;
   font-size: 2.5vw;
+  margin-left: 50vw;
 
 }
 
@@ -394,6 +395,8 @@ a {
 }
 
 
+
+
 @media (max-width: 768px) {
   .head {
     font-size: 10vw;
@@ -513,9 +516,14 @@ a {
   }
 
   .pic {
-  padding-top: 10vh;
   height: 20vh;
-   background-size: c;
+  background-size: contain;
+  margin-bottom: 0;
+  
+  }
+
+  header {
+    margin-bottom: 3vh;
   }
 
   .single img {
