@@ -9,9 +9,11 @@ function Header(props) {
 
   return (
     <div className="header" >
+      <div className="loginmobile">
       <h1 className="head">spotted.</h1>
-      <Login handleLogin={props.handleLogin} handleLogout={props.handleLogout}  />
       
+      <Login handleLogin={props.handleLogin} handleLogout={props.handleLogout}  />
+      </div>
     </div>
   )
 }

@@ -44,7 +44,7 @@ class MakeSpot extends Component {
     return(
       <div className="makeform">
 
-        <form className="register" onSubmit={(e) => this.createSpot(e, this.state)}>
+        <form className="register" id="theseguys" onSubmit={(e) => this.createSpot(e, this.state)}>
           <h2>Add a spot</h2>
           <label htmlFor="name">Name (required)</label>
           <input

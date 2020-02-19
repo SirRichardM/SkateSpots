@@ -22,7 +22,7 @@ class Login extends Component {
     return (
       <div className="logphone">
         {!localStorage.getItem('name') &&
-          <form  onSubmit={(e) => this.props.handleLogin(e, this.state)}>
+          <form className="logg" onSubmit={(e) => this.props.handleLogin(e, this.state)}>
             <h2 className="logbutt">Login!</h2>
             <label className="heademail" htmlFor="email">Email</label>
           

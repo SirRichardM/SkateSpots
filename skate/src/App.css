@@ -335,7 +335,7 @@ a {
   margin: 2vh 30vw;
   border-radius: 10px;
   border: .5vw solid #670303;
-  padding: 1vw;
+  padding: .25vw;
 
 }
 
@@ -381,10 +381,17 @@ a {
   margin: 0 10vw;
 }
 
+.loginmobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
 
 
-
-
+.logg {
+  margin-left: 17vw;
+}
 
 
 @media (max-width: 768px) {
@@ -461,6 +468,26 @@ a {
     visibility: hidden;
   }
 
+  .loginmobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logbutt {
+    visibility: hidden;
+  }
+
+  .head {
+    padding: 0;
+    line-height: 0;
+    margin-top: 5vh;
+  }
+
+  .logg {
+    padding-bottom: 1vh;
+    ;
+    line-height: 0;
+  }
 }
 
 
@@ -493,12 +520,17 @@ a {
     margin: 5vw;
   }
 
-  button {
-    width: 40vw;
+  .login button {
+    width: 20vw;
     font-size: 4vw;
     align-content: center;
+    margin-bottom: 3vh;
   }
 
+ 
+.head {
+  font-size: 10vh;
+}
   input {
     font-size: 4vh;
     height: 5vh;
@@ -515,11 +547,26 @@ a {
     
   }
   .header input {
-    justify-content: space-evenly;
-    height: 1vh;
-    width: 5vw;
+    flex-direction: column;
+    height: .5vh;
+    width: 10vw;
+    font-size: 3vh;
     
   }
+.loginmobile {
+  display: flex;
+  flex-direction: column;
+}
+
+.logg {
+  margin-left: .1vw;
+}
+
+.logbutt {
+  visibility: hidden;
+}
+
+
 }
 
 .comintro {
@@ -530,4 +577,12 @@ a {
 .cominput input {
   height: 3vh;
   width: 15vw;
+}
+
+.register input {
+  margin: .5vh 7vw;
+}
+
+#theseguys input {
+  margin: 1vh 15vw;
 }
