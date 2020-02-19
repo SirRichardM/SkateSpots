@@ -24,7 +24,7 @@ Spot.create( name: "Colombia University", address:"420 W 118th, New York, NY 100
 
 Spot.create( name: "Thomas Greene Park", address:"575 Degraw St, Brooklyn, NY 11217", boro: "brooklyn", trains: "Union St R-train, Atlantic Terminal", obstacles: "Manny pad, up-down ledge, curved ledge", rating: 5, description: "Relaxed park with fun little obstacles for some good training. Regular park so sometimes there will be volleyball games and such. There is also a weird little brick thing to skate.", noteworthy: "", photo_main: "https://quartersnacks.com/wp-content/uploads/2011/07/thomasgreene-4.jpg", photo2: "https://lh3.googleusercontent.com/proxy/ybNZGWqCQevGdE72TvSNM5dXJRh2gM54qxWiRIQAZKZALxp9Tu_YaywappnEe2G3-MFv2YL3jreUCMsdu8rXp7OFN-814CoAiGiPgJzORVwTiU5GCKgjcs7HkdVd6GGyQIawI3c", photo3: "https://4.bp.blogspot.com/-vuje6LXyz-Y/TcGXdv_oKYI/AAAAAAAATuQ/PP8hb7WS1D8/s1600/California+Skateparks+skate+element.jpg", phto4: "https://www.brooklynpaper.com/wp-content/uploads/2008/10/30_20greeneplayground_z.jpg", photo5: "", user_id: 1)
 
-Spot.create( name: "", address:"", boro: "manhattan", trains: "", obstacles: "", rating: 5, description: ".", noteworthy: "", photo_main: "", photo2: "", photo3: "", phto4: "", photo5: "", user_id: 1)
+# Spot.create( name: "", address:"", boro: "manhattan", trains: "", obstacles: "", rating: 5, description: ".", noteworthy: "", photo_main: "", photo2: "", photo3: "", phto4: "", photo5: "", user_id: 1)
 
 
 
