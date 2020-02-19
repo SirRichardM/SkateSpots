@@ -269,8 +269,9 @@ class SingleSpot extends Component {
         )}
 
         {localStorage.getItem('name') &&
-          <form onSubmit={(e) => this.postComment(e, this.state.commentData)}>
-            <input
+          <form className="cominput" onSubmit={(e) => this.postComment(e, this.state.commentData)}>
+          <input
+            
               type="text"
               name="text"
               value={this.state.commentData.text}

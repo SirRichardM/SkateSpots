@@ -526,3 +526,8 @@ a {
   font-family: 'Luckiest Guy', cursive;
   color: white;
 }
+
+form input {
+  height: 3vh;
+  width: 15vw;
+}
