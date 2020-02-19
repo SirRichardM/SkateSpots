@@ -152,7 +152,7 @@ class SingleSpot extends Component {
 
 
 
-        {localStorage.getItem('id') == this.state.userId && localStorage.getItem('name') &&
+        {localStorage.getItem('id') == this.state.userId && localStorage.getItem('name') && localStorage.getItem('id') !== null &&
           <form onSubmit={(e) => this.handleUpdate(e, this.state.spotUp)}>
             <div className="submitForm">
 
