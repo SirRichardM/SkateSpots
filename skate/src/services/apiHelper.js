@@ -24,6 +24,7 @@ export const registerUser = async (registerData) => {
     localStorage.setItem('authToken', resp.data.auth_token);
     localStorage.setItem('name', resp.data.user.name);
     localStorage.setItem('email', resp.data.user.email);
+    localStorage.setItem('id', resp.data.user.id)
     return resp.data.user;
   } catch (e) {
     console.log(e.response);

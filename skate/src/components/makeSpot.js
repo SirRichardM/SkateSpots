@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { postSpot } from "../services/apiHelper";
+import { withRouter } from "react-router-dom"
 
 class MakeSpot extends Component {
   constructor(props) {
@@ -32,7 +33,9 @@ class MakeSpot extends Component {
 
   createSpot = async (e, spotInfo) => {
     const newSpot = await postSpot(spotInfo)
+   
     return newSpot
+    
   }
 
 
@@ -164,4 +167,4 @@ class MakeSpot extends Component {
 
 }
 
-export default MakeSpot;
+export default withRouter(MakeSpot);
