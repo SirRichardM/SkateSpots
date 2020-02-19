@@ -86,7 +86,7 @@ class Register extends Component  {
             onChange={this.handleChange}
           />
           
-          <button>Submit!</button>
+          <button className="submitbutt">Submit!</button>
         </form>
           
         

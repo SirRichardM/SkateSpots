@@ -20,28 +20,30 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div className="logphone">
         {!localStorage.getItem('name') &&
-          <form onSubmit={(e) => this.props.handleLogin(e, this.state)}>
+          <form  onSubmit={(e) => this.props.handleLogin(e, this.state)}>
             <h2 className="logbutt">Login!</h2>
-            <label htmlFor="email">Email</label>
+            <label className="heademail" htmlFor="email">Email</label>
           
             <input
               type="text"
               name="email"
               value={this.state.email}
-              onChange={this.handleChange}
+            onChange={this.handleChange}
+            placeholder="email"
             />
-            <label htmlFor="password">Password</label>
+            <label className="headpass" htmlFor="password">Password</label>
          
             <input
               type="password"
               name="password"
               value={this.state.password}
-              onChange={this.handleChange}
+            onChange={this.handleChange}
+            placeholder="password"
             />
          
-            <button className="login">Log the fuck in b</button>
+            <button className="login">Log in b</button>
 
 
           </form>}

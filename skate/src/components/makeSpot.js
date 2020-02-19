@@ -41,16 +41,16 @@ class MakeSpot extends Component {
     return(
       <div className="makeform">
 
-        <form className="makeform" onSubmit={(e) => this.createSpot(e, this.state)}>
+        <form className="register" onSubmit={(e) => this.createSpot(e, this.state)}>
           <h2>Add a spot</h2>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">Name (required)</label>
           <input
             type="text"
             name="name"
             value={this.state.name}
             onChange={this.handleChange}
           />
-          <label htmlFor="address">address</label>
+          <label htmlFor="address">address (required)</label>
           <input
             type="text"
             name="address"
@@ -58,7 +58,7 @@ class MakeSpot extends Component {
             onChange={this.handleChange}
           />
 
-          <label htmlFor="boro">Which boro?</label>
+          <label htmlFor="boro">Which boro?(required) </label>
           <input
             type="text"
             name="boro"
@@ -66,7 +66,7 @@ class MakeSpot extends Component {
             onChange={this.handleChange}
           />
 
-      <label htmlFor="trains">Closest Train?</label>
+      <label htmlFor="trains">Closest Train? (required)</label>
           <input
             type="text"
             name="trains"

@@ -249,8 +249,11 @@ input {
   font-size: 2.5vw;
   color: white;
   text-shadow: .25vw .25vw #670303;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0,0,0,.6);
+  
+  
 }
+
 
 
 .register input {
@@ -258,7 +261,7 @@ input {
 }
 
 .register button {
-  margin: 2vh 25vw;
+  margin: 2vh 10vw;
   padding-top: 1vh;
   padding-bottom: 1vh;
 }
@@ -281,6 +284,9 @@ input {
 .makeform {
   display: flex;
   flex-direction: column;
+  background-image: url(https://img.redbull.com/images/c_fill,g_auto,w_1150,h_1438/q_70,f_auto/redbullcom/2014/10/24/1331686559893_2/danpensyl-ollie-nyc-zandertaketomo);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 a {
@@ -291,17 +297,37 @@ a {
   pointer-events: none;
 }
 
+.heademail {
+  font-size: 2vw;
+}
 
+.headpass {
+  font-size: 2vw;
+}
+
+.skate {
+  margin-top: 0;
+}
 
 .skate :hover {
-  background-image: url(https://media2.giphy.com/media/12JRSmZRvCLjgc/giphy.gif?cid=790b7611970c7242a5572ec29499442a85aaac866d36a6a8&rid=giphy.gif);
-  background-size: cover;
+  /* background-image: url(https://media0.giphy.com/media/pIYhEgpzZqYpy/giphy.gif?cid=790b76114c36238640d963e86a95bff772dd9804ec67db76&rid=giphy.gif); */
+  background-size: round;
+  background-repeat: no-repeat;
+  background-color: pink;
+  
 }
 
 
 .indyshowcase {
   background-color: white;
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 0;
+}
+
+.indyshowcase a:hover {
+  color: white;
 }
 
 .comments {
@@ -341,13 +367,15 @@ a {
 }
 
 .indyshowcase:hover {
-  background-color: #670303;
-  background-image: url(https://media.giphy.com/media/12JRSmZRvCLjgc/giphy.gif);
+  /* background-color: #670303; */
+  background-image: url(https://media.giphy.com/media/pIYhEgpzZqYpy/giphy.gif);
+  transform: scale(.9);
+  background-repeat: no-repeat;
   
 }
 
 .skatingback {
-  background-image: url(https://nssdata.s3.amazonaws.com/images/galleries/11798/exclusive-watch-ari-marcopoulos-capture-mark-gonzales-and-tyshawn-jones-shredding-nyc-1487597610.jpg);
+  background-image: url(https://lh3.googleusercontent.com/proxy/2ZFh62p14S61Wu7dZ1ALwX0NKlRSjcnQKpfSAM9XUFlG_rYWIoddn_VAyvilh_yzsIKbJVQOpSpx1D26c5osSX55OOL2kXE-V-E-S4TqAKQKmRcMkngBK6n1miTK3JkaJxC_HH1wLx8c);
   background-size: cover;
   background-attachment: fixed;
   margin: 0 10vw;
@@ -366,12 +394,13 @@ a {
 
   .pic {
     background-size: contain;
-    
+    height: 27vh;
     background-repeat: no-repeat;
   }
 
   .showcase {
     grid-template-columns: 50% 50%;
+    margin: 2vh 
   }
 
   .singlespotpics {
@@ -385,10 +414,14 @@ a {
     justify-content: center;
   }
 
+  .locinfo img {
+    height:
+  }
+
   .single img {
     width: inherit;
     height: 50vh;
-    padding-left:;
+    
     align-content: center;
   }
 
@@ -403,12 +436,31 @@ a {
   }
 
   .locinfo img {
-    height: 50vh;
+    width: 99%
   }
 
   .mainsingle {
-    font-size:
+    font-size: 7vw;
   }
+
+  .header {
+    flex-direction: row;
+  }
+
+  .logphone {
+    display: flex;
+    flex-direction: row;
+    margin-right:5vw;
+  }
+
+  .heademail {
+    visibility: hidden;
+  }
+
+  .headpass {
+    visibility: hidden;
+  }
+  
 }
 
 
@@ -420,7 +472,52 @@ a {
   }
 
   .pic {
-  padding: 0;
-   height: 35vh;
+  padding-top: 10vh;
+  height: 20vh;
+   background-size: c;
+  }
+
+  .single img {
+    width: 99%
+  }
+
+  .locinfo {
+    font-size: 5vw;
+  }
+
+  .mainsingle {
+    font-size: 7vw;
+  }
+
+  .comments {
+    margin: 5vw;
+  }
+
+  button {
+    width: 40vw;
+    font-size: 4vw;
+    align-content: center;
+  }
+
+  input {
+    font-size: 4vh;
+    height: 5vh;
+    padding: 1vh;
+    margin-bottom: 1vh;
+  }
+
+  .register {
+    font-size: 3vh;
+    margin: 4vw;
+  }
+
+  .header input {
+    
+  }
+  .header input {
+    justify-content: space-evenly;
+    height: 1vh;
+    width: 5vw;
+    
   }
 }

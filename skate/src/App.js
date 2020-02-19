@@ -105,7 +105,7 @@ class App extends Component {
           </div>
 
         </nav>
-        <Route path="/spot/new" render={() => <MakeSpot />} />
+        <Route  exact path="/spot/new" render={() => <MakeSpot />} />
         <Route exact path="/spot" render={() => <SpotsContainer />} />
         <Route path="/signup" render={() => <Register handleRegister={this.handleRegister} />} />
         <Route exact path path="/spot/:id" render={(props) => (
