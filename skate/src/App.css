@@ -310,7 +310,7 @@ a {
   margin-top: 0;
 }
 
-.skate :hover {
+.skate:hover {
   /* background-image: url(https://media0.giphy.com/media/pIYhEgpzZqYpy/giphy.gif?cid=790b76114c36238640d963e86a95bff772dd9804ec67db76&rid=giphy.gif); */
   background-size: round;
   background-repeat: no-repeat;
