@@ -258,10 +258,14 @@ input {
 
 .intro:hover {
   animation-name: blink;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   
   animation-iteration-count: infinite;
 
+}
+
+.button:hover{
+  transform: translateX(-1vw)
 }
 
 
@@ -695,20 +699,20 @@ a {
 
 @keyframes blink {
 
-25% {  text-shadow:  .5vw .5vw black, 1vw 1vw #670303;
+25% {  text-shadow:  .5vw .5vw black, 1vw 1vw #670303, 1.5vw 1.5vw goldenrod;
 
 }
 
-50% { text-shadow: .5vw .5vw black;
+50% { text-shadow: .5vw .5vw black, 1vw 1vw #670303;
 
 }
 
-75% { text-shadow: none
+75% { text-shadow: .5vw .5vw black;
  
 
 }
 
-100% { text-shadow: .5vw .5vw black;
+100% { text-shadow: .5vw .5vw 3vw goldenrod;
 
 }
 
