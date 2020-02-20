@@ -25,7 +25,8 @@ class Register extends Component  {
   render() {
     return (
       <div className="skatingback">
-        <form className="register" onSubmit={(e) => this.props.handleRegister(e, this.state)}>
+      
+        <form id="reg" className="register" onSubmit={(e) => this.props.handleRegister(e, this.state)}>
         <h2>Sign da fuck up!</h2>
           <label htmlFor="name"> Name (required)</label>
           <input

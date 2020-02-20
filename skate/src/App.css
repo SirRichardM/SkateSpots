@@ -77,6 +77,20 @@ body {
 
 }
 
+.hov:hover {
+  /* box-shadow:
+  1px 1px #daa520,
+  2px 2px goldenrod,
+  3px 3px goldenrod;
+  transform: translateX(-1vw); */
+  animation-duration: 2s;
+  animation-name: swing;
+  animation-iteration-count: infinite;
+  
+}
+
+
+
 .headbutt {
   margin-right: 5vw;
   margin-top: 5vh;
@@ -632,4 +646,39 @@ a {
 
 #theseguys input {
   margin: 1vh 15vw;
+}
+
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+        text-shadow: .5vw .5vw white, 1vw 1vw #670303;
+    }
+    30%
+    {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 }

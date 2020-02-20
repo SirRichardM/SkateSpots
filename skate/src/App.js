@@ -90,9 +90,9 @@ class App extends Component {
         </div>
         
         <nav className="navbar">
-          <Link className="golden" to="/spot">See All Spots</Link>
-          <Link className="golden" to="/signup">Register</Link>
-          <Link className="golden" to="/spot/new">Make a Spot</Link>
+          <Link className="golden hov" to="/spot">See All Spots</Link>
+          <Link className="golden hov" to="/signup">Register</Link>
+          <Link className="golden hov" to="/spot/new">Make a Spot</Link>
           <div className="dropdown">
             <a className="golden">Spots by Boro</a>
             <div className="dropdownmenu">

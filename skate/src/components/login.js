@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {withRouter} from "react-router-dom"
+import {withRouter, Link} from "react-router-dom"
 
 
 class Login extends Component {
@@ -22,8 +22,8 @@ class Login extends Component {
     return (
       <div className="logphone">
         {!localStorage.getItem('name') &&
-          <form className="logg" onSubmit={(e) => this.props.handleLogin(e, this.state)}>
-            <h2 className="logbutt">Login!</h2>
+          <form href="#reg" className="logg" onSubmit={(e) => this.props.handleLogin(e, this.state)}>
+            <h2 className="logbutt">Not a member? <Link to="/signup">Click Here to Register! </Link></h2>
             <label className="heademail" htmlFor="email">Email</label>
           
             <input
