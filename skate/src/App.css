@@ -578,6 +578,13 @@ a {
     margin-left: 80vw;
     margin-bottom: 3vh;
   }
+
+  .login {
+    font-size: 3vw;
+    margin-left: 5vw;
+  }
+
+
 }
 
 
@@ -653,6 +660,11 @@ a {
   flex-direction: column;
 }
 
+.loginmobile input {
+  font-size: 2vh;
+  width: 15vw;
+}
+
 .logg {
   margin-left: .1vw;
 }
@@ -674,6 +686,11 @@ a {
 .header {
   display: flex;
   
+}
+
+.login {
+  font-size: 2.5vh;
+  margin-left: 5vw;
 }
 
 
