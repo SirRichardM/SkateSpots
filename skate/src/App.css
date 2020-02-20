@@ -203,6 +203,16 @@ button {
   border-radius: 5px;
   
 }
+
+.subbutt {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5vw;
+  box-shadow: .5vw .5vw  #670303;
+  border-radius: 5px;
+  height: 4.5vh
+}
+
+
 img {
   width: 25vw;
   height: 25vh;
@@ -394,8 +404,9 @@ a {
   background-color: white;
   margin: 2vh 30vw;
   border-radius: 10px;
-  border: .5vw solid #670303;
+  border: .5vw solid goldenrod;
   padding: .25vw;
+  font-size: 2vh;
 
 }
 
@@ -671,6 +682,7 @@ a {
 .comintro {
   font-family: 'Luckiest Guy', cursive;
   color: white;
+  margin-top: 7vh;
 }
 
 .cominput input {

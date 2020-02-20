@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-class Register extends Component  {
+class Register extends Component {
   constructor(props) {
     super(props)
 
@@ -16,18 +16,23 @@ class Register extends Component  {
     }
   }
 
+  componentDidMount = () => {
+    const elmt = document.querySelector("#reg");
+    elmt.scrollIntoView();
+  }
+
   handleChange = (e) => {
     const { name, value } = e.target;
-    this.setState({ [name]: value})
+    this.setState({ [name]: value })
   }
-  
+
 
   render() {
     return (
       <div className="skatingback">
-      
+
         <form id="reg" className="register" onSubmit={(e) => this.props.handleRegister(e, this.state)}>
-        <h2>Sign da fuck up!</h2>
+          <h2>Sign da fuck up!</h2>
           <label htmlFor="name"> Name (required)</label>
           <input
             type="text"
@@ -49,7 +54,7 @@ class Register extends Component  {
             value={this.state.password}
             onChange={this.handleChange}
           />
-          
+
           <label htmlFor="location">Location</label>
           <input
             type="text"
@@ -71,7 +76,7 @@ class Register extends Component  {
             value={this.state.current_skate}
             onChange={this.handleChange}
           />
-          
+
           <label htmlFor="best_vids">Name your favorite skate videos..</label>
           <input
             type="text"
@@ -86,13 +91,13 @@ class Register extends Component  {
             value={this.state.photo}
             onChange={this.handleChange}
           />
-          
+
           <button className="submitbutt">Submit!</button>
         </form>
-          
-        
 
-        
+
+
+
       </div>
     )
   }

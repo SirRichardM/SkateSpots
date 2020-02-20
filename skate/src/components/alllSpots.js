@@ -10,13 +10,17 @@ class AllSpots extends Component {
     }
   }
 
+  componentDidMount = () => {
+    const elmt = document.querySelector("#show");
+    elmt.scrollIntoView();
+  }
 
   render() {
     console.log(this.props);
     return (
 
       
-          < div className="showcase" >
+          < div id="show" className="showcase" >
           { localStorage.getItem('name') &&
             this.props.spots.map((spot, index) => (
               <div key={index} className="indyshowcase">

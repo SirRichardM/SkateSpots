@@ -275,7 +275,7 @@ class SingleSpot extends Component {
 
 
 
-              <input type="submit" />
+              <input className="subbutt" type="submit" />
 
 
 
@@ -285,6 +285,8 @@ class SingleSpot extends Component {
           </div>
 
         }
+
+        <br/>
 
         <h1 className="comintro">Survey says. . .</h1>
         <br />
@@ -303,7 +305,7 @@ class SingleSpot extends Component {
               value={this.state.commentData.text}
               onChange={e => this.handleChange(e)}
             />
-            <button>Tell us your thoughts..</button>
+            <button >Tell us your thoughts..</button>
           </form>
         }
 

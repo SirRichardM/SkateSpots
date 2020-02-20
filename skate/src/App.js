@@ -51,6 +51,8 @@ class App extends Component {
         currentUser: user
       })
     }
+    const elmt = document.querySelector("#show");
+    elmt.scrollIntoView();
 
   }
 
@@ -73,6 +75,7 @@ class App extends Component {
     } else {
       this.setState({ errorText: currentUser.errorMessage })
     }
+    this.props.history.push("/spot");
   }
 
 
@@ -84,7 +87,7 @@ class App extends Component {
         <Header handleLogin={this.handleLogin} handleLogout={this.handleLogout} />
         {/* <Login handleLogin={this.handleLogin} handleLogout={this.handleLogout} /> */}
 
-        <div className="pic">
+        <div id="show" className="pic">
           <br />
           {this.state.currentUser &&
             <h1 className="intro">Sup {this.state.currentUser.name} ?</h1>}
