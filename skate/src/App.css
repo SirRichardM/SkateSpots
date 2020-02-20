@@ -413,6 +413,8 @@ a {
     background-size: contain;
     height: 27vh;
     background-repeat: no-repeat;
+    background-image: url(https://media1.giphy.com/media/pIYhEgpzZqYpy/giphy.gif?cid=790b761156e923304e3d87ef2806f8650fe092b1a0a971af&rid=giphy.gif);
+    background-attachment: fixed;;
   }
 
   .showcase {

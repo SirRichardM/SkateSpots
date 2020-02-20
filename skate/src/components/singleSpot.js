@@ -125,12 +125,13 @@ class SingleSpot extends Component {
         window.scrollTo(0,0);
         {this.state.spot &&
           <div className="single">
+          
           <div className="locinfo">
-          <h2 className="mainsingle">{this.state.spot.name}</h2>
+          
               <img src={this.state.spot.photo_main} />
               {/* <div className="locinfo"> */}
               <div className="wtf">
-               
+              <h2 className="mainsingle">{this.state.spot.name}</h2>
                 <h3>{this.state.spot.boro}</h3>
                 <h3>{this.state.spot.address}</h3>
                 <h4>{this.state.spot.trains}</h4>
