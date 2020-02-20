@@ -178,8 +178,9 @@ class SingleSpot extends Component {
           <button onClick={(e) => this.hideUpdate()}>Hide</button>}
 
         {localStorage.getItem('id') == this.state.userId && localStorage.getItem('name') && localStorage.getItem('id') !== null && (this.state.show === true) &&
+           <div className="submitform">
           <form onSubmit={(e) => this.handleUpdate(e, this.state.spotUp)}>
-            <div className="submitForm">
+           
 
               <input
                 type="text"
@@ -278,10 +279,10 @@ class SingleSpot extends Component {
 
 
 
-            </div>
+           
             <button onClick={this.handleDelete}>DELETE</button>
           </form>
-
+          </div>
 
         }
 

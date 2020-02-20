@@ -3,7 +3,7 @@ import { Link, Route, withRouter } from "react-router-dom"
 import './App.css';
 import Header from "./components/header"
 import Login from "./components/Login"
-import { loginUser, verifyUser, registerUser } from './services/apiHelper';
+import { loginUser, verifyUser, registerUser, indexSpots } from './services/apiHelper';
 import AllSpots from "./components/spotsContainer"
 import Register from "./components/register"
 import MakeSpot from "./components/makeSpot"
@@ -34,6 +34,7 @@ class App extends Component {
     e.preventDefault();
     const currentUser = await loginUser(loginData)
     this.setState({ currentUser });
+    // indexSpots();
     this.props.history.push("/spot")
 
   }
