@@ -106,6 +106,15 @@ body {
   font-size: 2.5vh;
 }
 
+.logbutt a {
+  color: goldenrod;
+  text-shadow: .2vw .2vw #670303;
+}
+
+.logbutt a:hover {
+  color: white;
+}
+
 .login {
   margin-right: 3vw;
 }
@@ -252,7 +261,7 @@ input {
   font-family: 'Luckiest Guy', cursive;
   color: white;;
   text-shadow: .5vw .5vw black, 1vw 1vw #670303, 1.5vw 1.5vw goldenrod;
-  font-size: 5vw;
+  font-size: 4.75vw;
 
 }
 
