@@ -6,7 +6,7 @@ function Header() {
 
 
       <h3>Made By Richard Moebus</h3>
-      <h3>Sponsored By Jenkem</h3>
+      {/* <h3>Sponsored By Jenkem</h3> */}
     </div>
   )
 }
