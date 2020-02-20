@@ -270,6 +270,7 @@ button:hover{
   transition-duration: 1s;
   color: #670303;
   text-shadow: .25vw .25vw goldenrod;
+  cursor: pointer;
 }
 
 
