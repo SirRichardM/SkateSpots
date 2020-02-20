@@ -106,9 +106,13 @@ class SingleSpot extends Component {
   }
 
   postComment = async (e, comment) => {
-
+    e.preventDefault();
     verifyUser();
     commentDaSpot(this.props.spotId, comment);
+    this.setState({
+      comments: [...this.state.comments, comment]
+    })
+  
 
   }
 
@@ -263,11 +267,11 @@ class SingleSpot extends Component {
 
         }
 
-        <h1 className="comintro">Survey says</h1>
+        <h1 className="comintro">Survey says. . .</h1>
         <br />
         {this.state.comments && this.state.comments.map((comment, index) =>
           <div key={index} className="comments">
-            <h5>{comment.name} says...</h5>  <p>{comment.text}</p>
+             <p>{comment.text}</p>  <h5>Yours truly, {comment.name}</h5> 
           </div>
         )}
 

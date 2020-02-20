@@ -32,9 +32,11 @@ class MakeSpot extends Component {
 }
 
   createSpot = async (e, spotInfo) => {
+    e.preventDefault();
     const newSpot = await postSpot(spotInfo)
    
     return newSpot
+    
     
   }
 
