@@ -8,6 +8,7 @@ class SingleSpot extends Component {
     super(props)
 
     this.state = {
+      show: false,
       comments: [],
       commentData: {
         text: '',
@@ -116,10 +117,24 @@ class SingleSpot extends Component {
 
   }
 
+  showupdate = async (e) => {
+    
+    
+    this.setState ({
+      show: true
+    })
+  }
+
+  hideUpdate = async (e) => {
+    this.setState({
+      show: false
+    })
+  }
+
 
   render() {
 
-    console.log(this.props.user)
+    console.log(this.state.show)
 
     console.log(this.state.userId);
     // console.log(this.state.spotUp)
@@ -157,9 +172,12 @@ class SingleSpot extends Component {
           </div>
         }
 
+        { this.state.show === false ?
+          <button onClick={(e) => this.showupdate()}> Show Update Form</button>
+            :
+          <button onClick={(e) => this.hideUpdate()}>Hide</button>}
 
-
-        {localStorage.getItem('id') == this.state.userId && localStorage.getItem('name') && localStorage.getItem('id') !== null &&
+        {localStorage.getItem('id') == this.state.userId && localStorage.getItem('name') && localStorage.getItem('id') !== null && (this.state.show === true) &&
           <form onSubmit={(e) => this.handleUpdate(e, this.state.spotUp)}>
             <div className="submitForm">
 
