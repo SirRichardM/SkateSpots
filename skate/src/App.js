@@ -15,6 +15,7 @@ import BrookSpots from "./components/brookSpots"
 import Qspots from "./components/queenSpot"
 import BronxSpots from "./components/bronxSpots"
 import StatenSpots from "./components/statenSpots"
+import { thisTypeAnnotation } from '@babel/types';
 
 
 class App extends Component {
@@ -26,7 +27,8 @@ class App extends Component {
       email: "",
       password: "",
       currentUser: null,
-      errorText: ""
+      errorText: "",
+      spots: []
     }
   }
 
@@ -34,6 +36,11 @@ class App extends Component {
     e.preventDefault();
     const currentUser = await loginUser(loginData)
     this.setState({ currentUser });
+    localStorage.getItem('name') 
+    const resp = indexSpots();
+    this.setState({
+      spots: resp
+    })
     // indexSpots();
     this.props.history.push("/spot")
 
@@ -53,6 +60,12 @@ class App extends Component {
     }
     const elmt = document.querySelector("#show");
     elmt.scrollIntoView();
+    const resp = indexSpots();
+    this.setState({
+      spots: resp
+    })
+
+    
 
   }
 
