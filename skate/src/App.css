@@ -264,8 +264,12 @@ input {
 
 }
 
-.button:hover{
-  transform: translateX(-1vw)
+button:hover{
+  transform: translateX(1vw);
+  box-shadow: none;
+  transition-duration: 1s;
+  color: #670303;
+  text-shadow: .25vw .25vw goldenrod;
 }
 
 
